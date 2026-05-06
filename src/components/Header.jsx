@@ -6,7 +6,7 @@ export default function Header() {
       
         <div className="nav-container">
             <a href="#" className="logo">
-                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp" alt="SaleRev-Ai Logo" />
+                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png" alt="SaleRev-Ai Logo" />
             </a>
 
             {/* Navigation Links (Centered) */}

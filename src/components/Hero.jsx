@@ -1,63 +1,70 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function Hero() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || window.innerWidth <= 768) return;
+
+    const cellSize = 60;
+    let cols, rows;
+
+    function initGrid() {
+      canvas.innerHTML = '';
+      const width = canvas.offsetWidth;
+      const height = canvas.offsetHeight;
+      
+      cols = Math.ceil(width / cellSize);
+      rows = Math.ceil(height / cellSize);
+      
+      canvas.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
+      canvas.style.gridTemplateRows = `repeat(${rows}, ${cellSize}px)`;
+      
+      const totalCells = cols * rows;
+      
+      for (let i = 0; i < totalCells; i++) {
+          const cell = document.createElement('div');
+          cell.className = 'grid-cell';
+          canvas.appendChild(cell);
+      }
+    }
+
+    initGrid();
+    window.addEventListener('resize', initGrid);
+
+    return () => {
+        window.removeEventListener('resize', initGrid);
+    };
+  }, []);
+
   return (
     <section className="hero">
-      
         
-        {/* Background Layers */}
+        {/* Background Image Layer */}
         <div className="hero-img-layer"></div>
-        <div className="hero-grid-layer">
-            {/* Strategic Corner Framing (20x15 Grid: 300 total tiles) */}
-            {/* Row 1 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell r-med"></div><div className="grid-cell r-high"></div><div className="grid-cell r-max"></div><div className="grid-cell r-max"></div><div className="grid-cell r-high"></div>
-            {/* Row 2 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell r-med"></div><div className="grid-cell r-high"></div><div className="grid-cell r-max"></div><div className="grid-cell r-med"></div>
-            {/* Row 3 */}
-            <div className="grid-cell"></div><div className="grid-cell r-med"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell r-med"></div><div className="grid-cell r-high"></div><div className="grid-cell r-low"></div>
-            {/* Row 4 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div>
-            {/* Row 5 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div>
-            {/* Row 6 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-med"></div><div className="grid-cell"></div>
-            {/* Row 7 */}
-            <div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div>
-            {/* Row 8 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div>
-            {/* Row 9 */}
-            <div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div>
-            {/* Row 10 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div>
-            {/* Row 11 */}
-            <div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div>
-            {/* Row 12 */}
-            <div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div>
-            {/* Row 13 */}
-            <div className="grid-cell r-med"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell r-med"></div>
-            {/* Row 14 */}
-            <div className="grid-cell r-high"></div><div className="grid-cell r-med"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-med"></div><div className="grid-cell r-high"></div><div className="grid-cell r-max"></div><div className="grid-cell"></div>
-            {/* Row 15 */}
-            <div className="grid-cell r-max"></div><div className="grid-cell r-high"></div><div className="grid-cell r-med"></div><div className="grid-cell r-low"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell"></div><div className="grid-cell r-low"></div><div className="grid-cell r-med"></div><div className="grid-cell r-high"></div><div className="grid-cell r-max"></div><div className="grid-cell"></div>
+        
+        {/* Dark Glass Mosaic Grid Layer */}
+        <div className="hero-grid-layer" id="grid-canvas" ref={canvasRef}>
+            {/* Grid tiles injected by JS to maintain clean HTML structure */}
         </div>
 
-        {/* Floating Graphics */}
+        {/* Floating Graphics (Premium Dark Style) */}
         <div className="float-card fc-1">
             <div className="fc-icon fc-green">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '20px', height: '20px' }}>
-                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                    <polyline points="16 7 22 7 22 13"></polyline>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                 </svg>
             </div>
             <div className="fc-text">
-                <div className="fc-title">Conversion Rate</div>
-                <div className="fc-value">+34.2%</div>
+                <div className="fc-title">Added Revenue</div>
+                <div className="fc-value">+$14,200/mo</div>
             </div>
         </div>
 
         <div className="float-card fc-2">
             <div className="fc-icon fc-red">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '20px', height: '20px' }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                     <line x1="16" y1="2" x2="16" y2="6"></line>
                     <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -65,61 +72,64 @@ export default function Hero() {
                 </svg>
             </div>
             <div className="fc-text">
-                <div className="fc-title">Appointments</div>
-                <div className="fc-value">12 Booked</div>
+                <div className="fc-title">Shop Schedule</div>
+                <div class="fc-value">12 Jobs Booked</div>
             </div>
         </div>
 
         {/* Center Content Card */}
         <article className="hero-content">
-            <h1>SaleRev-Ai Is Your <span className="highlight">Solar Lead Conversion</span> System.</h1>
+
+            <h1>SaleRev-Ai is your <span>solar lead conversion system.</span></h1>
             
             <h2 className="hero-subtitle">
                 Turn More of Your Solar Leads Into Booked Consultations, Automatically
             </h2>
             
             <p className="hero-description">
-                Most solar companies don’t have a lead problem. They have a response and conversion problem. This system makes sure every lead you pay for gets answered, qualified, and booked.
+                Most solar companies don’t have a lead problem. They have a response and <span style={{ whiteSpace: 'nowrap' }}>conversion problem.</span><br/>
+                This system makes sure every lead you pay for gets answered, qualified, and booked.
             </p>
 
             <div className="features-card">
-                <div className="features-card-title">What this system does for you</div>
+                <div className="features-card-title">What it does:</div>
                 <ul className="features-list">
                     <li className="feature-item">
                         <div className="feature-icon-wrapper">
-                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
                         </div>
                         Answers every inbound call instantly
                     </li>
                     <li className="feature-item">
                         <div className="feature-icon-wrapper">
-                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg>
                         </div>
                         Contacts new leads within seconds
                     </li>
                     <li className="feature-item">
-                        <div className="feature-icon-wrapper">
-                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        <div class="feature-icon-wrapper">
+                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <polyline points="17 11 19 13 23 9"></polyline>
                             </svg>
                         </div>
-                        Qualifies prospects automatically
+                        Qualifies prospects before your team speaks to them
                     </li>
                     <li className="feature-item">
                         <div className="feature-icon-wrapper">
-                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
                             </svg>
                         </div>
-                        Books directly into your calendar
+                        Books appointments directly into your calendar
                     </li>
                 </ul>
             </div>
@@ -135,7 +145,6 @@ export default function Hero() {
             </div>
         </article>
         
-    
     </section>
   );
 }
