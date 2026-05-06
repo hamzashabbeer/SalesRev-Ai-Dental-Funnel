@@ -1,0 +1,116 @@
+import React from 'react';
+
+export default function Problem() {
+  return (
+    <section className="section-problem" id="how-it-works">
+      
+        <div className="container">
+            
+            <div className="problem-grid">
+                {/* Left: Content */}
+                <div className="problem-content">
+                    <div className="eyebrow-red">The Problem</div>
+                    <h2>You’re Already Paying for Leads, But <span className="highlight">Losing Them in the First 5 Minutes</span></h2>
+                    
+                    <div className="problem-intro">Leads come in. <span className="emphasis-but">BUT:</span></div>
+                    
+                    <ul className="problem-list">
+                        <li className="problem-item">
+                            <div className="problem-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                            Calls get missed
+                        </li>
+                        <li className="problem-item">
+                            <div className="problem-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                            Follow-up is delayed
+                        </li>
+                        <li className="problem-item">
+                            <div className="problem-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                            Prospects lose interest
+                        </li>
+                        <li className="problem-item">
+                            <div className="problem-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                            Competitors respond faster
+                        </li>
+                    </ul>
+
+                    <div className="lost-deals-alert">
+                        And in solar, that means lost deals.
+                    </div>
+                </div>
+
+                {/* Right: Visual */}
+                <div className="problem-visual">
+                    <div className="problem-image-wrapper">
+                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1777924071/the_problem_secton_image_rc2dfy.webp" alt="Solar Engineer working" />
+                    </div>
+                    
+                    {/* New Professional Impact Graphic */}
+                    <div className="problem-impact-widget">
+                        <div className="piw-header">
+                            <span className="piw-title">Conversion Drop</span>
+                            <span className="piw-badge">Industry Data</span>
+                        </div>
+                        <div className="piw-chart">
+                            <div className="piw-bar-group">
+                                <div className="piw-bar primary" style={{ height: '100%' }}></div>
+                                <span className="piw-label">1m</span>
+                            </div>
+                            <div className="piw-bar-group">
+                                <div className="piw-bar" style={{ height: '40%' }}></div>
+                                <span className="piw-label">5m</span>
+                            </div>
+                            <div className="piw-bar-group">
+                                <div className="piw-bar" style={{ height: '15%' }}></div>
+                                <span className="piw-label">10m</span>
+                            </div>
+                            <div className="piw-bar-group">
+                                <div className="piw-bar" style={{ height: '5%' }}></div>
+                                <span className="piw-label">30m</span>
+                            </div>
+                        </div>
+                        <div className="piw-footer">
+                            <svg className="piw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                            <div className="piw-stat-text">
+                                <strong>391% higher</strong> conversion when prospect is called in minute one.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* The Reality Banner */}
+            <div className="reality-card">
+                <span className="reality-label">The Reality</span>
+                <p className="reality-text">
+                    The company that responds first usually wins.<br /> 
+                    If your process isn’t fast and consistent, you’re <span>losing revenue every day</span> — without realizing it.
+                </p>
+            </div>
+
+        </div>
+    
+    </section>
+  );
+}
