@@ -53,8 +53,8 @@
             width: calc(100% - 2rem);
             max-width: 1000px;
             background-color: rgba(13, 31, 60, 0.4);
-            backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px; 
             z-index: 100;
@@ -255,8 +255,8 @@
         /* Dark Theme Features Card */
         .features-card {
             background: rgba(13, 31, 60, 0.5);
-            backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 28px 40px;
@@ -354,8 +354,8 @@
         .float-card {
             position: absolute;
             background: rgba(13, 31, 60, 0.6);
-            backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 10px 14px;
@@ -540,8 +540,8 @@
             bottom: -20px;
             left: -40px; /* Kept exact position */
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.9);
             border-radius: 16px; /* Slightly reduced border radius to match smaller size */
             padding: 16px; /* Reduced padding from 24px */
@@ -1143,8 +1143,8 @@
         .roi-highlight {
             flex-shrink: 0;
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             padding: 1.75rem 2rem; /* Reduced from 3rem */
@@ -1232,8 +1232,8 @@
             bottom: -30px; /* Pulled out more for depth */
             right: -30px;
             background: rgba(255, 255, 255, 0.85); /* More translucent for glass effect */
-            backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.8);
             border-radius: 20px;
             padding: 20px 28px;
@@ -1792,8 +1792,8 @@
             bottom: 16px;
             right: 16px;
             background: rgba(13, 31, 60, 0.8);
-            backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
             color: white;
             font-size: 0.75rem;
             font-weight: 500;
@@ -2096,8 +2096,8 @@
             height: 56px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border-light);
             color: var(--navy);
             display: flex;
