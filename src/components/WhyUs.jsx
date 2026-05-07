@@ -10,7 +10,14 @@ export default function WhyUs() {
                 {/* Left: Visual */}
                 <div className="why-visual">
                     <div className="why-image-wrapper">
-                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1778022759/woman-inspecting-solar-panels-with-laptop-computer-2026-03-09-02-52-10-utc_thbyur.webp" alt="Solar operations" loading="lazy" decoding="async" />
+                        <img 
+                            src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778022759/woman-inspecting-solar-panels-with-laptop-computer-2026-03-09-02-52-10-utc_thbyur.webp&w=500&output=webp&q=80" 
+                            alt="Solar operations" 
+                            width="500" 
+                            height="375" 
+                            loading="lazy" 
+                            decoding="async" 
+                        />
                     </div>
                     
                     {/* Upgraded Premium Badge */}

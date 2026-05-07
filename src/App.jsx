@@ -15,15 +15,17 @@ export default function App() {
   return (
     <div className="app-container">
       <Header />
-      <Hero />
-      <Problem />
-      <Product />
-      <BusinessImpact />
-      <WhyUs />
-      <FAQ />
-      <AudioDemo />
-      <Testimonials />
-      <FinalCTA />
+      <main id="main-content" aria-label="Main content">
+        <Hero />
+        <Problem />
+        <Product />
+        <BusinessImpact />
+        <WhyUs />
+        <FAQ />
+        <AudioDemo />
+        <Testimonials />
+        <FinalCTA />
+      </main>
       <Footer />
     </div>
   );

@@ -6,7 +6,14 @@ export default function Header() {
       
         <div className="nav-container">
             <a href="#" className="logo">
-                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png" alt="SaleRev-Ai Logo" />
+                <img 
+                    src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&h=40&output=webp&q=80" 
+                    alt="SaleRev-Ai Logo" 
+                    width="160" 
+                    height="40" 
+                    fetchpriority="high" 
+                    decoding="sync" 
+                />
             </a>
 
             {/* Navigation Links (Centered) */}
@@ -25,7 +32,7 @@ export default function Header() {
                 <a href="#demo" className="btn-nav-cta">Book a Demo</a>
                 {/* Mobile Menu Toggle */}
                 <input type="checkbox" id="nav-toggle" />
-                <label htmlFor="nav-toggle" className="hamburger">
+                <label htmlFor="nav-toggle" className="hamburger" aria-label="Toggle mobile menu">
                     <span></span><span></span><span></span>
                 </label>
             </div>

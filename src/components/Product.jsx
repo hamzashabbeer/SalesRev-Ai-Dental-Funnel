@@ -9,7 +9,15 @@ export default function Product() {
             {/* Product Header */}
             <div className="product-header">
                 <div className="eyebrow-red">The Product</div>
-                <h2>What Is the <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp" alt="SaleRev-Ai" className="product-logo-inline" /> ?</h2>
+                <h2>What Is the <img 
+                    src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp&h=32&output=webp&q=80" 
+                    alt="SaleRev-Ai" 
+                    width="140" 
+                    height="32" 
+                    className="product-logo-inline" 
+                    loading="lazy" 
+                    decoding="async" 
+                /> ?</h2>
                 <p className="product-intro">
                     It’s a simple system designed specifically for solar companies. Its job is to make sure every lead is handled properly, from the first contact to the booked consultation.
                 </p>

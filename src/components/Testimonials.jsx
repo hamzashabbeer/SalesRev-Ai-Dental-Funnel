@@ -63,7 +63,7 @@ export default function Testimonials() {
 
             <div className="carousel-wrapper">
                 {/* Desktop Navigation Left */}
-                <button className="nav-btn prev" aria-label="Previous testimonials" onClick={handlePrev}>
+                <button className="nav-btn prev" aria-label="Show previous testimonial" onClick={handlePrev}>
                     <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
                 </button>
 
@@ -87,7 +87,15 @@ export default function Testimonials() {
                                 "Sebastian, Founder of Canvas Freaks, leveraged our partnership to <b>more than double his revenue in one year</b>, jumping from a stagnant <b>$1.5 million to $3.2 million.</b>"
                             </p>
                             <div className="tc-author">
-                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg" alt="Sebastian" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img 
+                                    src="https://wsrv.nl/?url=https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg&w=60&output=webp&q=80" 
+                                    alt="Sebastian" 
+                                    width="60" 
+                                    height="60" 
+                                    className="tc-avatar" 
+                                    loading="lazy" 
+                                    decoding="async" 
+                                />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Sebastian</span>
                                     <span className="tc-role">Founder of Canvas Freaks</span>
@@ -109,7 +117,15 @@ export default function Testimonials() {
                                 "Linda, a business owner, captured previously lost leads and <b>dramatically increased appointments</b> by using SaleRev-Ai for instant, automated follow-ups."
                             </p>
                             <div className="tc-author">
-                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Linda" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img 
+                                    src="https://wsrv.nl/?url=https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&w=60&output=webp&q=80" 
+                                    alt="Linda" 
+                                    width="60" 
+                                    height="60" 
+                                    className="tc-avatar" 
+                                    loading="lazy" 
+                                    decoding="async" 
+                                />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Linda</span>
                                     <span className="tc-role">Business Owner</span>
@@ -131,7 +147,15 @@ export default function Testimonials() {
                                 "Deborah Williamson, CEO & Founder of Purity Wellness, achieved outstanding results with our database reactivation strategy generating <b>$247,000 in just 2 months.</b>"
                             </p>
                             <div className="tc-author">
-                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg" alt="Deborah Williamson" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img 
+                                    src="https://wsrv.nl/?url=https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg&w=60&output=webp&q=80" 
+                                    alt="Deborah Williamson" 
+                                    width="60" 
+                                    height="60" 
+                                    className="tc-avatar" 
+                                    loading="lazy" 
+                                    decoding="async" 
+                                />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Deborah Williamson</span>
                                     <span className="tc-role">CEO of Purity Wellness</span>
@@ -153,7 +177,15 @@ export default function Testimonials() {
                                 "A business owner <b>increased their lead close rate by 43% in the first month</b> by using SaleRev-Ai to provide instant, 24/7 responses to customer inquiries."
                             </p>
                             <div className="tc-author">
-                                <img src="https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Betti" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img 
+                                    src="https://wsrv.nl/?url=https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&w=60&output=webp&q=80" 
+                                    alt="Betti" 
+                                    width="60" 
+                                    height="60" 
+                                    className="tc-avatar" 
+                                    loading="lazy" 
+                                    decoding="async" 
+                                />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Betti</span>
                                     <span className="tc-role">Business Owner</span>
@@ -165,7 +197,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Desktop Navigation Right */}
-                <button className="nav-btn next" aria-label="Next testimonials" onClick={handleNext}>
+                <button className="nav-btn next" aria-label="Show next testimonial" onClick={handleNext}>
                     <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
 

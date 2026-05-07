@@ -36,7 +36,7 @@ export default function FAQ() {
             <div className="faq-layout-grid">
                 
                 {/* Left Sidebar: Header & Contact Box */}
-                <div className="faq-sidebar">
+                <div className="faq-sidebar mobile-no-sticky">
                     <div className="faq-header-left">
                         <div className="eyebrow-red">Objections Handled</div>
                         <h2>Frequently Asked <span className="highlight">Questions</span></h2>

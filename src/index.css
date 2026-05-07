@@ -168,7 +168,7 @@
         .hero-img-layer {
             position: absolute;
             inset: 0;
-            background-image: url('https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp');
+            background-image: url('https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp&w=1200&output=webp&q=80');
             background-size: cover;
             background-position: center;
             z-index: 0;
@@ -1559,7 +1559,7 @@
                 z-index: 0;
                 background-image: 
                     linear-gradient(rgba(10, 15, 28, 0.85), rgba(10, 15, 28, 0.85)),
-                    url('https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp');
+                    url('https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp&w=800&output=webp&q=80');
                 background-size: cover;
                 background-position: center;
             }
@@ -2704,3 +2704,55 @@
         }
         @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
 
+        /* --- PERFORMANCE & RESPONSIVENESS UPGRADES --- */
+
+        /* Responsive Font Sizes */
+        h1 { font-size: 2.5rem; line-height: 1.1; }
+        h2 { font-size: 2rem; line-height: 1.2; }
+        
+        @media (min-width: 1024px) {
+            h1 { font-size: 4rem; }
+            h2 { font-size: 3rem; }
+        }
+
+        /* Mobile Static Positioning for Sticky Elements */
+        @media (max-width: 1023px) {
+            .mobile-no-sticky {
+                position: static !important;
+            }
+            
+            /* Progressive Padding */
+            section, 
+            .section-problem, 
+            .section-product, 
+            .section-why, 
+            .section-audio, 
+            .section-testimonials, 
+            .section-cta {
+                padding: 4rem 0 !important;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            section, 
+            .section-problem, 
+            .section-product, 
+            .section-why, 
+            .section-audio, 
+            .section-testimonials, 
+            .section-cta {
+                padding: 8rem 0 !important;
+            }
+        }
+
+        /* Global Mobile Overflow Fix */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Accessible Landmark Helper */
+        #main-content {
+            display: block;
+            width: 100%;
+        }
