@@ -77,7 +77,7 @@ export default function Testimonials() {
                     {/* Card 1: Sebastian */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/S-FauDEIgdM" title="Client Testimonial for Sebastian" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/S-FauDEIgdM" title="Client Testimonial for Sebastian" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -99,7 +99,7 @@ export default function Testimonials() {
                     {/* Card 2: Linda */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/aEtCpiksYjg" title="Client Testimonial for Linda" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/aEtCpiksYjg" title="Client Testimonial for Linda" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -121,7 +121,7 @@ export default function Testimonials() {
                     {/* Card 3: Deborah */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/cVNqJ_NttrQ" title="Client Testimonial for Deborah" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/cVNqJ_NttrQ" title="Client Testimonial for Deborah" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -143,7 +143,7 @@ export default function Testimonials() {
                     {/* Card 4: Betti */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/9F2XuPHVmxE" title="Client Testimonial for Betti" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/9F2XuPHVmxE" title="Client Testimonial for Betti" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">

@@ -20,8 +20,11 @@ if (fs.existsSync(htmlFile)) {
     }
   }
   
+  // Strip unwanted YouTube preconnects that Lighthouse is flagging
+  html = html.replace(/<link[^>]*rel="preconnect"[^>]*href="https:\/\/i\.ytimg\.com"[^>]*\/?>/g, '');
+  
   fs.writeFileSync(htmlFile, html);
-  console.log('CSS inlining complete.');
+  console.log('CSS inlining and HTML cleaning complete.');
 } else {
   console.error('dist/index.html not found. Run npm run build first.');
 }
