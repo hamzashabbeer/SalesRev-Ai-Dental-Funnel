@@ -94,9 +94,9 @@ export default function Footer() {
 
                   {/* Newsletter */}
                   <div className="w-full max-w-lg flex-1">
-                      <form className="newsletter-container flex items-center bg-white/5 border border-solid border-white/10 rounded-full p-1.5 w-full">
-                          <input type="email" placeholder="Enter your email to subscribe" className="flex-1 bg-transparent border-none text-white text-sm px-5 py-2 focus:outline-none placeholder-slate-500" required />
-                          <button type="submit" className="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-full transition-colors shadow-lg shadow-red-600/20">
+                      <form className="newsletter-container flex flex-col sm:flex-row items-stretch sm:items-center bg-white/5 border border-solid border-white/10 rounded-2xl sm:rounded-full p-2 sm:p-1.5 w-full gap-2 sm:gap-0">
+                          <input type="email" placeholder="Enter your email to subscribe" className="flex-1 bg-transparent border-none text-white text-sm px-5 py-3 sm:py-2 focus:outline-none placeholder-slate-500" required />
+                          <button type="submit" className="px-8 py-3 sm:py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl sm:rounded-full transition-colors shadow-lg shadow-red-600/20 whitespace-nowrap">
                               Subscribe
                           </button>
                       </form>
