@@ -25,34 +25,6 @@
   <body>
     <div id="root"></div>
     
-    <!-- Delay JS Execution until User Interaction -->
-    <script type="text/javascript">
-      (function() {
-        var scriptsLoaded = false;
-        function loadScripts() {
-          if (scriptsLoaded) return;
-          scriptsLoaded = true;
-          
-          var mainScript = document.createElement('script');
-          mainScript.type = 'module';
-          mainScript.src = '/src/main.jsx';
-          document.body.appendChild(mainScript);
-          
-          // Remove event listeners
-          window.removeEventListener('scroll', loadScripts);
-          window.removeEventListener('mousemove', loadScripts);
-          window.removeEventListener('touchstart', loadScripts);
-          window.removeEventListener('click', loadScripts);
-        }
-        
-        window.addEventListener('scroll', loadScripts, { passive: true });
-        window.addEventListener('mousemove', loadScripts, { passive: true });
-        window.addEventListener('touchstart', loadScripts, { passive: true });
-        window.addEventListener('click', loadScripts, { passive: true });
-        
-        // Safety timeout for essential interactivity (e.g. 3s)
-        setTimeout(loadScripts, 3500);
-      })();
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
