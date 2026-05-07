@@ -11,12 +11,16 @@ export default function Hero() {
     let cols, rows;
 
     function initGrid() {
-      canvas.innerHTML = '';
       const width = canvas.offsetWidth;
       const height = canvas.offsetHeight;
       
-      cols = Math.ceil(width / cellSize);
-      rows = Math.ceil(height / cellSize);
+      const newCols = Math.ceil(width / cellSize);
+      const newRows = Math.ceil(height / cellSize);
+      
+      // Update DOM after calculations to avoid layout thrashing
+      canvas.innerHTML = '';
+      cols = newCols;
+      rows = newRows;
       
       canvas.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
       canvas.style.gridTemplateRows = `repeat(${rows}, ${cellSize}px)`;
