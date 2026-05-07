@@ -73,7 +73,7 @@ export default function Hero() {
             </div>
             <div className="fc-text">
                 <div className="fc-title">Shop Schedule</div>
-                <div class="fc-value">12 Jobs Booked</div>
+                <div className="fc-value">12 Jobs Booked</div>
             </div>
         </div>
 
@@ -111,7 +111,7 @@ export default function Hero() {
                         Contacts new leads within seconds
                     </li>
                     <li className="feature-item">
-                        <div class="feature-icon-wrapper">
+                        <div className="feature-icon-wrapper">
                             <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="8.5" cy="7" r="4"></circle>
