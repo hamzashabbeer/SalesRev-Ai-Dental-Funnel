@@ -2,26 +2,27 @@ import React, { useRef, useEffect } from 'react';
 
 export default function Testimonials() {
   const trackRef = useRef(null);
+  const scrollAmountRef = useRef(0);
   let autoScrollInterval = useRef(null);
 
-  const getScrollAmount = () => {
-    if (!trackRef.current) return 0;
+  const updateScrollAmount = () => {
+    if (!trackRef.current) return;
     const card = trackRef.current.querySelector('.testi-card');
-    if (!card) return 0;
+    if (!card) return;
     const gap = parseInt(window.getComputedStyle(trackRef.current).gap) || 0;
-    return card.offsetWidth + gap;
+    scrollAmountRef.current = card.offsetWidth + gap;
   };
 
   const handlePrev = () => {
     if (trackRef.current) {
-      trackRef.current.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      trackRef.current.scrollBy({ left: -scrollAmountRef.current, behavior: 'smooth' });
       resetAutoScroll();
     }
   };
 
   const handleNext = () => {
     if (trackRef.current) {
-      trackRef.current.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      trackRef.current.scrollBy({ left: scrollAmountRef.current, behavior: 'smooth' });
       resetAutoScroll();
     }
   };
@@ -32,7 +33,7 @@ export default function Testimonials() {
       if (trackRef.current.scrollLeft + trackRef.current.clientWidth >= trackRef.current.scrollWidth - 10) {
         trackRef.current.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        trackRef.current.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        trackRef.current.scrollBy({ left: scrollAmountRef.current, behavior: 'smooth' });
       }
     }, 4000);
   };
@@ -45,8 +46,11 @@ export default function Testimonials() {
   };
 
   useEffect(() => {
+    updateScrollAmount();
+    window.addEventListener('resize', updateScrollAmount);
     startAutoScroll();
     return () => {
+      window.removeEventListener('resize', updateScrollAmount);
       if (autoScrollInterval.current) {
         clearInterval(autoScrollInterval.current);
       }

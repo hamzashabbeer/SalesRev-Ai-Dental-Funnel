@@ -106,7 +106,7 @@ export default function Footer() {
                   {/* Logo */}
                   <div className="flex-shrink-0">
                       <img 
-                        src="https://wsrv.nl/?url=https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png&h=80&output=webp&q=90" 
+                        src="https://wsrv.nl/?url=https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png&w=160&h=40&fit=contain&output=webp&q=60" 
                         alt="Salesrev Logo" 
                         width="160" 
                         height="40" 
@@ -147,7 +147,7 @@ export default function Footer() {
                   <div className="lg:col-span-4 lg:pr-8">
                       <div className="mb-6">
                           <img 
-                            src="https://wsrv.nl/?url=https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png&h=80&output=webp&q=90" 
+                            src="https://wsrv.nl/?url=https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png&w=160&h=40&fit=contain&output=webp&q=60" 
                             alt="Salesrev Logo" 
                             width="160" 
                             height="40" 

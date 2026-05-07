@@ -13,12 +13,16 @@
     
     <!-- Non-blocking Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
-    </noscript>
+    <style>
+      :root { --primary: #ed3231; --bg-dark: #0A0F1C; }
+      body { background-color: #ffffff; margin: 0; font-family: sans-serif; overflow-x: hidden; }
+      .hero { background-color: var(--bg-dark); min-height: 100vh; }
+    </style>
+    <link rel="stylesheet" href="/src/index.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
 
     <!-- Preload Hero LCP Image -->
-    <link rel="preload" as="image" href="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp&w=1920&output=webp&q=90">
+    <link rel="preload" as="image" href="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp&w=1920&output=webp&q=75">
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Turn more of your solar leads into booked consultations automatically with SaleRev-Ai. The ultimate solar lead conversion system." />

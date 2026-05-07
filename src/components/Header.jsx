@@ -7,7 +7,7 @@ export default function Header() {
         <div className="nav-container">
             <a href="#" className="logo">
                 <img 
-                    src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&h=80&output=webp&q=90" 
+                    src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&w=160&h=40&fit=contain&output=webp&q=60" 
                     alt="SaleRev-Ai Logo" 
                     width="160" 
                     height="40" 
