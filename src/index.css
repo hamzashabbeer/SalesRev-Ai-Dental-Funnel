@@ -1560,8 +1560,10 @@
         }
 
         @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+            section { padding-left: 0 !important; padding-right: 0 !important; }
             .hero { 
-                padding: 8rem 1rem 4rem; 
+                padding: 8rem 0 4rem; 
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
@@ -1589,7 +1591,7 @@
                 position: relative;
                 z-index: 10;
                 order: 1; 
-                padding: 0; 
+                padding: 0 16px; 
                 width: 100%;
                 max-width: 100%;
             }
@@ -1618,10 +1620,10 @@
             }
 
             /* Problem Section Mobile */
-            .section-problem { padding: 4.5rem 1rem; } 
+            .section-problem { padding: 4.5rem 0; } 
             .problem-grid { grid-template-columns: 1fr; gap: 4rem; }
             .problem-content h2 { font-size: 1.8rem; } 
-            .problem-visual { padding: 0 1rem 1rem 0; margin-bottom: 3rem; }
+            .problem-visual { padding: 0 0 1rem 0; margin-bottom: 3rem; }
             
             /* Adjust the new widget for mobile screens */
             .problem-impact-widget {
@@ -1638,17 +1640,17 @@
             .trust-badges { flex-direction: column; gap: 12px; }
 
             /* Product Section Mobile */
-            .section-product { padding: 4.5rem 1rem; }
+            .section-product { padding: 4.5rem 0; }
             .product-header { margin-bottom: 4rem; }
-            .product-header h2 { font-size: 2rem; }
+            .product-header h2 { font-size: 1.9rem; }
             .product-logo-inline { height: 32px; transform: translateY(-2px); }
             .step-grid { grid-template-columns: 1fr; gap: 3.5rem; }
             .step-grid::before { display: none; } /* Hide connecting line on mobile */
             .flow-banner { padding: 1.5rem; } /* Matched mobile padding */
             
             /* Impact Section Mobile */
-            .section-impact { padding: 4.5rem 1rem; }
-            .impact-header h2 { font-size: 2.2rem; }
+            .section-impact { padding: 4.5rem 0; }
+            .impact-header h2 { font-size: 1.9rem; }
             .impact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .impact-card { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
             /* Reset bento spans for mobile */
@@ -1658,14 +1660,14 @@
                 padding: 2.5rem; 
             }
             .impact-card { padding: 2.5rem; }
-            .ic-title { font-size: 1.3rem; }
+            .ic-title { font-size: 1.15rem; }
             
             .roi-banner { flex-direction: column; padding: 1.5rem; gap: 1.5rem; text-align: left; border-radius: 20px; }
             .roi-text { font-size: 1.25rem; } /* Matched to reality-text mobile size */
             .roi-highlight { width: 100%; padding: 1.5rem; }
 
             /* Why Us Section Mobile */
-            .section-why { padding: 4.5rem 1rem; }
+            .section-why { padding: 4.5rem 0; }
             .why-grid { grid-template-columns: 1fr; gap: 4rem; }
             .why-visual { order: 2; padding: 1rem 1rem 0 0; margin-bottom: 2rem; }
             .why-visual::before { left: auto; right: 0; }
@@ -2046,7 +2048,7 @@
                 padding: 4.5rem 0;
             }
             .audio-content h2 {
-                font-size: 2.2rem;
+                font-size: 1.9rem;
             }
             .demo-card {
                 max-width: 100%;
@@ -2368,7 +2370,7 @@
                 text-align: left;
             }
             .header-wrapper h2 {
-                font-size: 2.2rem;
+                font-size: 1.9rem;
             }
             .testi-card {
                 flex: 0 0 100%; /* Exact 1-card display */
@@ -2558,9 +2560,9 @@
         }
 
         @media (max-width: 768px) {
-            .section-cta { padding: 4rem 1rem; }
+            .section-cta { padding: 4rem 0; }
             .cta-billboard { padding: 4rem 1.5rem; border-radius: 24px; }
-            .cta-heading { font-size: 2.2rem; }
+            .cta-heading { font-size: 1.9rem; }
             .cta-description { font-size: 1.05rem; margin-bottom: 2.5rem; }
             .btn-primary { padding: 16px 32px; font-size: 1.05rem; width: 100%; }
         }
