@@ -9,7 +9,7 @@ export default function Footer() {
     script.onload = () => {
         window.tailwind.config = {
             corePlugins: {
-                preflight: false, // DO NOT RESET APP STYLES
+                preflight: false,
             },
             theme: {
                 extend: {
@@ -30,7 +30,6 @@ export default function Footer() {
         }
     };
     document.head.appendChild(script);
-
   }, []);
 
   const currentYear = new Date().getFullYear();
@@ -90,7 +89,7 @@ export default function Footer() {
                   
                   {/* Logo */}
                   <div className="flex-shrink-0">
-                      <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-10 object-contain" loading="lazy" decoding="async" />
+                      <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&w=160&output=webp&q=60" alt="Salesrev Logo" className="h-10 object-contain" width="140" height="40" loading="lazy" decoding="async" />
                   </div>
 
                   {/* Newsletter */}
@@ -106,13 +105,13 @@ export default function Footer() {
                   {/* Socials */}
                   <div className="flex items-center gap-3 flex-shrink-0">
                       <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
-                          <i className="ph-fill ph-linkedin-logo text-xl"></i>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                       </a>
                       <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
-                          <i className="ph-fill ph-instagram-logo text-xl"></i>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                       </a>
                       <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
-                          <i className="ph-fill ph-youtube-logo text-xl"></i>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
                       </a>
                   </div>
               </div>
@@ -138,19 +137,19 @@ export default function Footer() {
                       <h4 className="text-white font-bold text-lg mb-6">Contact Us</h4>
                       <ul className="space-y-5">
                           <li className="flex items-start gap-3">
-                              <i className="ph ph-map-pin text-red-500 text-lg mt-0.5"></i>
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="mt-0.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                               <span className="text-slate-400 text-sm leading-relaxed">
                                   66-68 Hagley Road<br/>Birmingham B16 8PF
                               </span>
                           </li>
                           <li className="flex items-center gap-3 group">
-                              <i className="ph ph-phone text-red-500 text-lg"></i>
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                               <a href="tel:01902921235" className="text-slate-400 text-sm group-hover:text-white transition-colors">
                                   0-1902-921235
                               </a>
                           </li>
                           <li className="flex items-center gap-3 group">
-                              <i className="ph ph-envelope-simple text-red-500 text-lg"></i>
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                               <a href="mailto:info@salesrev.ai" className="text-slate-400 text-sm group-hover:text-white transition-colors">
                                   info@salesrev.ai
                               </a>
