@@ -87,7 +87,7 @@ export default function Testimonials() {
                                 "Sebastian, Founder of Canvas Freaks, leveraged our partnership to <b>more than double his revenue in one year</b>, jumping from a stagnant <b>$1.5 million to $3.2 million.</b>"
                             </p>
                             <div className="tc-author">
-                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg" alt="Sebastian" className="tc-avatar" />
+                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg" alt="Sebastian" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Sebastian</span>
                                     <span className="tc-role">Founder of Canvas Freaks</span>
@@ -109,7 +109,7 @@ export default function Testimonials() {
                                 "Linda, a business owner, captured previously lost leads and <b>dramatically increased appointments</b> by using SaleRev-Ai for instant, automated follow-ups."
                             </p>
                             <div className="tc-author">
-                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Linda" className="tc-avatar" />
+                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Linda" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Linda</span>
                                     <span className="tc-role">Business Owner</span>
@@ -131,7 +131,7 @@ export default function Testimonials() {
                                 "Deborah Williamson, CEO & Founder of Purity Wellness, achieved outstanding results with our database reactivation strategy generating <b>$247,000 in just 2 months.</b>"
                             </p>
                             <div className="tc-author">
-                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg" alt="Deborah Williamson" className="tc-avatar" />
+                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg" alt="Deborah Williamson" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Deborah Williamson</span>
                                     <span className="tc-role">CEO of Purity Wellness</span>
@@ -153,7 +153,7 @@ export default function Testimonials() {
                                 "A business owner <b>increased their lead close rate by 43% in the first month</b> by using SaleRev-Ai to provide instant, 24/7 responses to customer inquiries."
                             </p>
                             <div className="tc-author">
-                                <img src="https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Betti" className="tc-avatar" />
+                                <img src="https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Betti" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Betti</span>
                                     <span className="tc-role">Business Owner</span>

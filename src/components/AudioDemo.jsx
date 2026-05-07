@@ -56,7 +56,7 @@ export default function AudioDemo() {
                         
                         {/* Card Image Top */}
                         <div className="dc-image">
-                            <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778090186/solar-panel-installation-team-shaking-hands-at-wor-2026-03-19-23-44-21-utc_smdxwi.webp" alt="Solar Team Shaking Hands" />
+                            <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778090186/solar-panel-installation-team-shaking-hands-at-wor-2026-03-19-23-44-21-utc_smdxwi.webp" alt="Solar Team Shaking Hands" loading="lazy" decoding="async" />
                             <div className="dc-duration-tag">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>

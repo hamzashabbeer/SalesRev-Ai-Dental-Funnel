@@ -101,7 +101,7 @@ export default function Footer() {
                   
                   {/* Logo */}
                   <div className="flex-shrink-0">
-                      <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-10 object-contain" />
+                      <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-10 object-contain" loading="lazy" decoding="async" />
                   </div>
 
                   {/* Newsletter */}
@@ -134,7 +134,7 @@ export default function Footer() {
                   {/* Column 1 */}
                   <div className="lg:col-span-4 lg:pr-8">
                       <div className="mb-6">
-                          <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-8 lg:h-10 object-contain" />
+                          <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-8 lg:h-10 object-contain" loading="lazy" decoding="async" />
                       </div>
                       <p className="text-slate-400 text-sm leading-relaxed mb-6">
                           Salesrev helps ambitious businesses and brands with AI-driven, advanced digital marketing services. Start building visibility, growth, and success with us today.

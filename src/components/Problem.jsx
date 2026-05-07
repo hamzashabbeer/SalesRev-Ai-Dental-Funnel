@@ -61,7 +61,7 @@ export default function Problem() {
                 {/* Right: Visual */}
                 <div className="problem-visual">
                     <div className="problem-image-wrapper">
-                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1777924071/the_problem_secton_image_rc2dfy.webp" alt="Solar Engineer working" />
+                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1777924071/the_problem_secton_image_rc2dfy.webp" alt="Solar Engineer working" loading="lazy" decoding="async" />
                     </div>
                     
                     {/* New Professional Impact Graphic */}
