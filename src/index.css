@@ -1594,13 +1594,8 @@
             }
 
             .float-card {
-                position: absolute;
-                transform: scale(0.7);
-                z-index: 5;
-                display: flex; /* Restore on mobile */
+                display: none; 
             }
-            .fc-1 { top: 12%; right: -20px; left: auto; }
-            .fc-2 { bottom: 10%; left: -20px; right: auto; }
 
             /* Problem Section Mobile */
             .section-problem { padding: 4.5rem 1rem; } 
