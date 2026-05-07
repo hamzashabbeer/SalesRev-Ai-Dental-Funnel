@@ -6,7 +6,7 @@ export default function Header() {
       
         <div className="nav-container">
             <a href="#" className="logo">
-                <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&w=490&output=webp&q=85" alt="SaleRev-Ai Logo" width="245" height="70" fetchpriority="high" decoding="sync" />
+                <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&w=245&output=webp&q=75" alt="SaleRev-Ai Logo" width="245" height="70" fetchpriority="high" decoding="sync" />
             </a>
 
             {/* Navigation Links (Centered) */}
