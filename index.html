@@ -9,7 +9,10 @@
     <!-- Performance Preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    </noscript>
     <link rel="preload" as="image" href="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778101034/solar-panel-installers-working-on-rooftop-system-2026-03-18-05-38-29-utc_1_ya8low.webp">
 
     <!-- SEO Meta Tags -->
@@ -23,6 +26,35 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Delay JS Execution until User Interaction -->
+    <script type="text/javascript">
+      (function() {
+        var scriptsLoaded = false;
+        function loadScripts() {
+          if (scriptsLoaded) return;
+          scriptsLoaded = true;
+          
+          var mainScript = document.createElement('script');
+          mainScript.type = 'module';
+          mainScript.src = '/src/main.jsx';
+          document.body.appendChild(mainScript);
+          
+          // Remove event listeners
+          window.removeEventListener('scroll', loadScripts);
+          window.removeEventListener('mousemove', loadScripts);
+          window.removeEventListener('touchstart', loadScripts);
+          window.removeEventListener('click', loadScripts);
+        }
+        
+        window.addEventListener('scroll', loadScripts, { passive: true });
+        window.addEventListener('mousemove', loadScripts, { passive: true });
+        window.addEventListener('touchstart', loadScripts, { passive: true });
+        window.addEventListener('click', loadScripts, { passive: true });
+        
+        // Safety timeout for essential interactivity (e.g. 3s)
+        setTimeout(loadScripts, 3500);
+      })();
+    </script>
   </body>
 </html>
