@@ -80,7 +80,7 @@ export default function Hero() {
         {/* Center Content Card */}
         <article className="hero-content">
 
-            <h1>SaleRev-Ai is your <span>solar lead conversion system.</span></h1>
+            <h1>SALEREV-AI IS YOUR SOLAR LEAD CONVERSION SYSTEM.</h1>
             
             <h2 className="hero-subtitle">
                 Turn More of Your Solar Leads Into Booked Consultations, Automatically
