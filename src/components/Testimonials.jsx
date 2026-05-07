@@ -88,7 +88,7 @@ export default function Testimonials() {
                             </p>
                             <div className="tc-author">
                                 <img 
-                                    src="https://wsrv.nl/?url=https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg&w=60&output=webp&q=80" 
+                                    src="https://wsrv.nl/?url=https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg&w=120&output=webp&q=90" 
                                     alt="Sebastian" 
                                     width="60" 
                                     height="60" 
@@ -118,7 +118,7 @@ export default function Testimonials() {
                             </p>
                             <div className="tc-author">
                                 <img 
-                                    src="https://wsrv.nl/?url=https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&w=60&output=webp&q=80" 
+                                    src="https://wsrv.nl/?url=https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&w=120&output=webp&q=90" 
                                     alt="Linda" 
                                     width="60" 
                                     height="60" 
@@ -148,7 +148,7 @@ export default function Testimonials() {
                             </p>
                             <div className="tc-author">
                                 <img 
-                                    src="https://wsrv.nl/?url=https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg&w=60&output=webp&q=80" 
+                                    src="https://wsrv.nl/?url=https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg&w=120&output=webp&q=90" 
                                     alt="Deborah Williamson" 
                                     width="60" 
                                     height="60" 
@@ -178,7 +178,7 @@ export default function Testimonials() {
                             </p>
                             <div className="tc-author">
                                 <img 
-                                    src="https://wsrv.nl/?url=https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&w=60&output=webp&q=80" 
+                                    src="https://wsrv.nl/?url=https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1&w=120&output=webp&q=90" 
                                     alt="Betti" 
                                     width="60" 
                                     height="60" 

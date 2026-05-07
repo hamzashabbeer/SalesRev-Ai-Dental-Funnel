@@ -57,7 +57,7 @@ export default function AudioDemo() {
                         {/* Card Image Top */}
                         <div className="dc-image">
                             <img 
-                                src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778090186/solar-panel-installation-team-shaking-hands-at-wor-2026-03-19-23-44-21-utc_smdxwi.webp&w=500&output=webp&q=80" 
+                                src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1778090186/solar-panel-installation-team-shaking-hands-at-wor-2026-03-19-23-44-21-utc_smdxwi.webp&w=1000&output=webp&q=90" 
                                 alt="Solar Team Shaking Hands" 
                                 width="500" 
                                 height="300" 

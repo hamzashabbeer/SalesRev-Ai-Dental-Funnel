@@ -10,7 +10,7 @@ export default function Product() {
             <div className="product-header">
                 <div className="eyebrow-red">The Product</div>
                 <h2>What Is the <img 
-                    src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp&h=32&output=webp&q=80" 
+                    src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp&h=64&output=webp&q=90" 
                     alt="SaleRev-Ai" 
                     width="140" 
                     height="32" 

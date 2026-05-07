@@ -62,7 +62,7 @@ export default function Problem() {
                 <div className="problem-visual">
                     <div className="problem-image-wrapper">
                         <img 
-                            src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777924071/the_problem_secton_image_rc2dfy.webp&w=600&output=webp&q=80" 
+                            src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777924071/the_problem_secton_image_rc2dfy.webp&w=1200&output=webp&q=90" 
                             alt="Solar Engineer working" 
                             width="600" 
                             height="450" 
