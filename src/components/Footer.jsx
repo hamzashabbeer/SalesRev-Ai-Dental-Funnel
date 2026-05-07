@@ -31,19 +31,15 @@ export default function Footer() {
     };
     document.head.appendChild(script);
 
-    // Load self-hosted Phosphor Icons non-blocking
+    // Add Phosphor Icons
     const link1 = document.createElement('link');
     link1.rel = 'stylesheet';
-    link1.href = '/fonts/phosphor-regular.css';
-    link1.media = 'print';
-    link1.onload = function() { this.media='all' };
+    link1.href = 'https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css';
     document.head.appendChild(link1);
 
     const link2 = document.createElement('link');
     link2.rel = 'stylesheet';
-    link2.href = '/fonts/phosphor-fill.css';
-    link2.media = 'print';
-    link2.onload = function() { this.media='all' };
+    link2.href = 'https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css';
     document.head.appendChild(link2);
 
   }, []);
@@ -105,22 +101,14 @@ export default function Footer() {
                   
                   {/* Logo */}
                   <div className="flex-shrink-0">
-                      <img 
-                        src="https://wsrv.nl/?url=https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png&w=160&h=40&fit=contain&output=webp&q=60" 
-                        alt="Salesrev Logo" 
-                        width="160" 
-                        height="40" 
-                        className="h-10 object-contain" 
-                        loading="lazy" 
-                        decoding="async" 
-                    />
+                      <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-10 object-contain" loading="lazy" decoding="async" />
                   </div>
 
                   {/* Newsletter */}
                   <div className="w-full max-w-lg flex-1">
                       <form className="newsletter-container flex items-center bg-white/5 border border-solid border-white/10 rounded-full p-1.5 w-full">
                           <input type="email" placeholder="Enter your email to subscribe" className="flex-1 bg-transparent border-none text-white text-sm px-5 py-2 focus:outline-none placeholder-slate-500" required />
-                          <button type="submit" aria-label="Subscribe to newsletter" className="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-full transition-colors shadow-lg shadow-red-600/20">
+                          <button type="submit" className="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-full transition-colors shadow-lg shadow-red-600/20">
                               Subscribe
                           </button>
                       </form>
@@ -128,13 +116,13 @@ export default function Footer() {
 
                   {/* Socials */}
                   <div className="flex items-center gap-3 flex-shrink-0">
-                      <a href="#" aria-label="LinkedIn" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
+                      <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
                           <i className="ph-fill ph-linkedin-logo text-xl"></i>
                       </a>
-                      <a href="#" aria-label="Instagram" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
+                      <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
                           <i className="ph-fill ph-instagram-logo text-xl"></i>
                       </a>
-                      <a href="#" aria-label="YouTube" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
+                      <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
                           <i className="ph-fill ph-youtube-logo text-xl"></i>
                       </a>
                   </div>
@@ -146,15 +134,7 @@ export default function Footer() {
                   {/* Column 1 */}
                   <div className="lg:col-span-4 lg:pr-8">
                       <div className="mb-6">
-                          <img 
-                            src="https://wsrv.nl/?url=https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png&w=160&h=40&fit=contain&output=webp&q=60" 
-                            alt="Salesrev Logo" 
-                            width="160" 
-                            height="40" 
-                            className="h-8 lg:h-10 object-contain" 
-                            loading="lazy" 
-                            decoding="async" 
-                        />
+                          <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="h-8 lg:h-10 object-contain" loading="lazy" decoding="async" />
                       </div>
                       <p className="text-slate-400 text-sm leading-relaxed mb-6">
                           Salesrev helps ambitious businesses and brands with AI-driven, advanced digital marketing services. Start building visibility, growth, and success with us today.

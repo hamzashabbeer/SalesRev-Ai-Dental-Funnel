@@ -11,32 +11,27 @@ export default function Hero() {
     let cols, rows;
 
     function initGrid() {
-      requestAnimationFrame(() => {
-        if (!canvas) return;
-        canvas.innerHTML = '';
-        const width = canvas.offsetWidth;
-        const height = canvas.offsetHeight;
-        
-        cols = Math.ceil(width / cellSize);
-        rows = Math.ceil(height / cellSize);
-        
-        canvas.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
-        canvas.style.gridTemplateRows = `repeat(${rows}, ${cellSize}px)`;
-        
-        const totalCells = cols * rows;
-        const fragment = document.createDocumentFragment();
-        
-        for (let i = 0; i < totalCells; i++) {
-            const cell = document.createElement('div');
-            cell.className = 'grid-cell';
-            fragment.appendChild(cell);
-        }
-        canvas.appendChild(fragment);
-      });
+      canvas.innerHTML = '';
+      const width = canvas.offsetWidth;
+      const height = canvas.offsetHeight;
+      
+      cols = Math.ceil(width / cellSize);
+      rows = Math.ceil(height / cellSize);
+      
+      canvas.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
+      canvas.style.gridTemplateRows = `repeat(${rows}, ${cellSize}px)`;
+      
+      const totalCells = cols * rows;
+      
+      for (let i = 0; i < totalCells; i++) {
+          const cell = document.createElement('div');
+          cell.className = 'grid-cell';
+          canvas.appendChild(cell);
+      }
     }
 
     initGrid();
-    window.addEventListener('resize', initGrid, { passive: true });
+    window.addEventListener('resize', initGrid);
 
     return () => {
         window.removeEventListener('resize', initGrid);
