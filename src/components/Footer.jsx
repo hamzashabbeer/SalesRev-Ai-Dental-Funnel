@@ -175,7 +175,7 @@ export default function Footer() {
                   <div className="lg:col-span-3 sm:col-span-1">
                       <h4 className="text-white font-bold text-lg mb-6">Industries We Serve</h4>
                       <ul className="space-y-3.5">
-                          {['Real Estate','Healthcare & Med Spa','Home Services','Legal Firms','Automotive','Fulfillment & E-com'].map(i => (
+                          {['Real Estate','Healthcare & Med Spa','Home Services','Legal Firms','Automotive','Solar Industries'].map(i => (
                               <li key={i}>
                                   <a href="#" className="footer-link flex items-center text-sm font-medium text-slate-400">
                                       <i className="ph-bold ph-caret-right footer-link-icon text-xs mr-2"></i> {i}
