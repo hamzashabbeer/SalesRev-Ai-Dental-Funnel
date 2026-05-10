@@ -84,37 +84,7 @@ export default function Footer() {
 
           <div className="max-w-[1100px] mx-auto px-6 w-full relative z-10">
               
-              {/* TOP SECTION: Newsletter & Socials */}
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-12 footer-divider-bottom mb-12">
-                  
-                  {/* Logo */}
-                  <div className="flex-shrink-0">
-                      <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778099095/69d93b139a68c417bdfb394d_rpm37n.png&w=160&output=webp&q=60" alt="Salesrev Logo" className="h-10 object-contain" width="140" height="40" loading="lazy" decoding="async" />
-                  </div>
 
-                  {/* Newsletter */}
-                  <div className="w-full max-w-lg flex-1">
-                      <form className="newsletter-container flex flex-col sm:flex-row items-stretch sm:items-center bg-white/5 border border-solid border-white/10 rounded-2xl sm:rounded-full p-2 sm:p-1.5 w-full gap-2 sm:gap-0">
-                          <input type="email" placeholder="Enter your email to subscribe" className="flex-1 bg-transparent border-none text-white text-sm px-5 py-3 sm:py-2 focus:outline-none placeholder-slate-500" required />
-                          <button type="submit" className="px-8 py-3 sm:py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl sm:rounded-full transition-colors shadow-lg shadow-red-600/20 whitespace-nowrap">
-                              Subscribe
-                          </button>
-                      </form>
-                  </div>
-
-                  {/* Socials */}
-                  <div className="flex items-center gap-3 flex-shrink-0">
-                      <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                      </a>
-                      <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                      </a>
-                      <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-solid border-white/10 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white hover:border-red-500 transition-all duration-300">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
-                      </a>
-                  </div>
-              </div>
 
               {/* MIDDLE SECTION: Links Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
@@ -175,10 +145,17 @@ export default function Footer() {
                   <div className="lg:col-span-3 sm:col-span-1">
                       <h4 className="text-white font-bold text-lg mb-6">Industries We Serve</h4>
                       <ul className="space-y-3.5">
-                          {['Real Estate','Healthcare & Med Spa','Home Services','Legal Firms','Automotive','Solar Industries'].map(i => (
-                              <li key={i}>
-                                  <a href="#" className="footer-link flex items-center text-sm font-medium text-slate-400">
-                                      <i className="ph-bold ph-caret-right footer-link-icon text-xs mr-2"></i> {i}
+                          {[
+                            { name: 'Real Estate', url: '#' },
+                            { name: 'Healthcare & Med Spa', url: '#' },
+                            { name: 'Home Services', url: '#' },
+                            { name: 'Legal Firms', url: '#' },
+                            { name: 'Automotive', url: 'https://automotive.salerevai.com/' },
+                            { name: 'Solar Industries', url: 'https://solar.salerevai.com/' }
+                          ].map(item => (
+                              <li key={item.name}>
+                                  <a href={item.url} className="footer-link flex items-center text-sm font-medium text-slate-400">
+                                      <i className="ph-bold ph-caret-right footer-link-icon text-xs mr-2"></i> {item.name}
                                   </a>
                               </li>
                           ))}
