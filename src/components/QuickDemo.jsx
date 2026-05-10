@@ -272,8 +272,10 @@ export default function QuickDemo() {
         .calendar-embed-wrapper {
             padding: 0;
             width: 100%;
-            height: 600px;
+            height: 900px;
             background: #ffffff;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .calendar-embed-wrapper iframe {
@@ -344,8 +346,8 @@ export default function QuickDemo() {
                       <div className="calendar-embed-wrapper">
                           <iframe 
                             src="https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD" 
-                            style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
-                            scrolling="no" 
+                            style={{ width: '100%', height: '100%', border: 'none', display: 'block' }} 
+                            scrolling="yes" 
                             id="PLG00EEmlWlPN8cvz9zD_1778407755038"
                             title="Quick Demo Booking Calendar"
                           ></iframe>
