@@ -1,32 +1,29 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Problem from './components/Problem';
-import Product from './components/Product';
-import BusinessImpact from './components/BusinessImpact';
-import WhyUs from './components/WhyUs';
-import FAQ from './components/FAQ';
-import AudioDemo from './components/AudioDemo';
-import Testimonials from './components/Testimonials';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import QuickDemo from './components/QuickDemo';
+import ThankYou from './components/ThankYou';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+  return null;
+}
 
 export default function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <main id="main-content">
-        <Hero />
-        <Problem />
-        <Product />
-        <BusinessImpact />
-        <WhyUs />
-        <FAQ />
-        <AudioDemo />
-        <Testimonials />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/book-demo" element={<QuickDemo />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+      </Routes>
+    </>
   );
 }

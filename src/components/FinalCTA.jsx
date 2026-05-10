@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function FinalCTA() {
   return (
@@ -18,13 +19,13 @@ export default function FinalCTA() {
                         <b>Now make sure you’re not losing them.</b>
                     </p>
 
-                    <a href="#demo" className="btn-primary">
+                    <Link to="/book-demo" className="btn-primary">
                         Book a Quick Demo Call
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
-                    </a>
+                    </Link>
 
                     <div className="cta-guarantee">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

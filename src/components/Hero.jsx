@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -139,13 +140,13 @@ export default function Hero() {
             </div>
 
             <div className="cta-group">
-                <a href="#demo" className="btn-primary">
+                <Link to="/book-demo" className="btn-primary">
                     See How It Works (Quick Demo)
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
-                </a>
+                </Link>
             </div>
         </article>
         
