@@ -82,7 +82,7 @@ export default function Testimonials() {
                     {/* Card 1: Sebastian */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/S-FauDEIgdM" title="Client Testimonial for Sebastian" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
+                            <iframe src="https://www.youtube.com/embed/5R5VoqlWS9c" title="Client Testimonial for Sebastian" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -104,7 +104,7 @@ export default function Testimonials() {
                     {/* Card 2: Linda */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/aEtCpiksYjg" title="Client Testimonial for Linda" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
+                            <iframe src="https://www.youtube.com/embed/K0iYAuDzSVA" title="Client Testimonial for Linda" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -126,7 +126,7 @@ export default function Testimonials() {
                     {/* Card 3: Deborah */}
                     <div className="testi-card">
                         <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/cVNqJ_NttrQ" title="Client Testimonial for Deborah" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
+                            <iframe src="https://www.youtube.com/embed/n2ClOdFNN4g" title="Client Testimonial for Deborah" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
                         </div>
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -145,27 +145,7 @@ export default function Testimonials() {
                         </div>
                     </div>
 
-                    {/* Card 4: Betti */}
-                    <div className="testi-card">
-                        <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/9F2XuPHVmxE" title="Client Testimonial for Betti" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
-                        </div>
-                        <div className="tc-content">
-                            <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                            </svg>
-                            <p className="tc-quote-text">
-                                "A business owner <b>increased their lead close rate by 43% in the first month</b> by using SaleRev-Ai to provide instant, 24/7 responses to customer inquiries."
-                            </p>
-                            <div className="tc-author">
-                                <img src="https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Betti" className="tc-avatar" loading="lazy" decoding="async" />
-                                <div className="tc-author-details">
-                                    <span className="tc-name">Betti</span>
-                                    <span className="tc-role">Business Owner</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
 

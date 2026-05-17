@@ -143,29 +143,6 @@ export default function ThankYou() {
             animation: fadeInUp 0.6s ease 0.2s both;
         }
 
-        /* --- VIDEO CARD --- */
-        .ty-video-wrapper {
-            width: 100%;
-            max-width: 680px;
-            margin-bottom: 5rem;
-            animation: fadeInUp 0.7s ease 0.3s both;
-        }
-
-        .ty-video-card {
-            border-radius: 32px;
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            box-shadow: 0 40px 80px rgba(13,31,60,0.12);
-            position: relative;
-            background: #000;
-        }
-
-        .ty-video-card iframe {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16/9;
-            border: none;
-        }
 
         /* --- NEXT STEPS GRID --- */
         .ty-steps-section {
@@ -261,18 +238,8 @@ export default function ThankYou() {
 
           <h1 className="ty-headline">You're all set! <span>We'll see you soon.</span></h1>
           <p className="ty-subhead">
-              Your demo is booked. Check your inbox for the calendar invite and meeting link. In the meantime, watch the quick intro below to see exactly what we'll be walking you through.
+              Your demo is booked. Check your inbox for the calendar invite and meeting link. We look forward to speaking with you!
           </p>
-
-          <div className="ty-video-wrapper">
-              <div className="ty-video-card">
-                  <iframe
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                      title="Product Intro"
-                      allowFullScreen
-                  ></iframe>
-              </div>
-          </div>
 
           <div className="ty-steps-section">
               <div className="ty-steps-label">What Happens Next</div>

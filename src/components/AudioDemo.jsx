@@ -1,24 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 
 export default function AudioDemo() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [seconds, setSeconds] = useState(12);
+  const [seconds, setSeconds] = useState(0);
+  const audioRef = useRef(null);
 
-  useEffect(() => {
-    let interval;
+  const togglePlay = () => {
+    if (!audioRef.current) return;
     if (isPlaying) {
-      interval = setInterval(() => {
-        setSeconds((prev) => {
-          if (prev < 102) return prev + 1;
-          setIsPlaying(false);
-          return 0;
-        });
-      }, 1000);
-    } else if (!isPlaying && seconds !== 0) {
-      clearInterval(interval);
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
     }
-    return () => clearInterval(interval);
-  }, [isPlaying, seconds]);
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setSeconds(audioRef.current.currentTime);
+    }
+  };
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+    setSeconds(0);
+  };
 
   const formatTime = (sec) => {
     const m = Math.floor(sec / 60);
@@ -87,10 +94,16 @@ export default function AudioDemo() {
                             </div>
 
                             <div className="dc-player-ui">
+                                <audio 
+                                    ref={audioRef}
+                                    src="https://storage.googleapis.com/synthflow-website-assets/Dental%20(Healthcare).mp3"
+                                    onTimeUpdate={handleTimeUpdate}
+                                    onEnded={handleEnded}
+                                />
                                 {/* Circular Play Button */}
                                 <button 
                                   className="play-btn" 
-                                  onClick={() => setIsPlaying(!isPlaying)}
+                                  onClick={togglePlay}
                                   aria-label="Play Audio"
                                 >
                                     {isPlaying ? pauseIcon : playIcon}
