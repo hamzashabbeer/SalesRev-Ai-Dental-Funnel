@@ -10,7 +10,7 @@ export default function WhyUs() {
                 {/* Left: Visual */}
                 <div className="why-visual">
                     <div className="why-image-wrapper">
-                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1778022759/woman-inspecting-solar-panels-with-laptop-computer-2026-03-09-02-52-10-utc_thbyur.webp" alt="Solar operations" loading="lazy" decoding="async" />
+                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710129/Secnd_section_image_lvd5nt.webp" alt="Dental practice staff" loading="lazy" decoding="async" />
                     </div>
                     
                     {/* Upgraded Premium Badge */}
@@ -27,7 +27,7 @@ export default function WhyUs() {
                         </div>
                         <div className="why-badge-content">
                             <span className="why-badge-label">100% Tailored</span>
-                            <div className="why-badge-text">Built for <span>Solar</span></div>
+                            <div className="why-badge-text">Built for <span>Dental</span></div>
                         </div>
                     </div>
                 </div>
@@ -35,11 +35,11 @@ export default function WhyUs() {
                 {/* Right: Content */}
                 <div className="why-content">
                     <div className="eyebrow-red">Why SaleRevAi</div>
-                    <h2><span className="highlight">Built for Solar</span>, Not Generic Software</h2>
+                    <h2><span className="highlight">Built for Dental</span>, Not Generic Software</h2>
                     
                     <p className="why-intro">
                         This isn’t a tool you have to figure out.<br />
-                        It’s a system built around how solar companies actually operate.
+                        It’s a system built around how busy dental clinics actually operate.
                     </p>
 
                     <ul className="why-list">
@@ -49,7 +49,7 @@ export default function WhyUs() {
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                             </div>
-                            <span className="why-item-text">Designed for solar lead handling</span>
+                            <span className="why-item-text">Designed for dental patient booking</span>
                         </li>
                         <li className="why-item">
                             <div className="why-item-icon">
@@ -73,7 +73,7 @@ export default function WhyUs() {
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                             </div>
-                            <span className="why-item-text">Built to improve conversion, not add complexity</span>
+                            <span className="why-item-text">Built to fill empty chairs, not add complexity</span>
                         </li>
                     </ul>
                 </div>

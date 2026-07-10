@@ -77,23 +77,23 @@ export default function Hero() {
                 </svg>
             </div>
             <div className="fc-text">
-                <div className="fc-title">Shop Schedule</div>
-                <div className="fc-value">12 Jobs Booked</div>
+                <div className="fc-title">Practice Schedule</div>
+                <div className="fc-value">12 Patients Booked</div>
             </div>
         </div>
 
         {/* Center Content Card */}
         <article className="hero-content">
 
-            <h1>SaleRev-Ai Is Your <span>Solar Lead Conversion System.</span></h1>
+            <h1>SaleRev-Ai Is Your <span>Dental Patient Booking System.</span></h1>
             
             <h2 className="hero-subtitle">
-                Turn More of Your Solar Leads Into Booked Consultations, Automatically
+                Turn More of Your Dental Leads Into Confirmed Appointments, Automatically
             </h2>
             
             <p className="hero-description">
-                Most solar companies don’t have a lead problem. They have a response and <span style={{ whiteSpace: 'nowrap' }}>conversion problem.</span><br/>
-                This system makes sure every lead you pay for gets answered, qualified, and booked.
+                Most dental practices don’t have a lead problem. They have a response and <span style={{ whiteSpace: 'nowrap' }}>booking problem.</span><br/>
+                This system makes sure every patient inquiry gets answered, qualified, and booked.
             </p>
 
             <div className="features-card">
@@ -123,7 +123,7 @@ export default function Hero() {
                                 <polyline points="17 11 19 13 23 9"></polyline>
                             </svg>
                         </div>
-                        Qualifies prospects before your team speaks to them
+                        Qualifies patient inquiries before your team speaks to them
                     </li>
                     <li className="feature-item">
                         <div className="feature-icon-wrapper">
@@ -134,7 +134,7 @@ export default function Hero() {
                                 <line x1="3" y1="10" x2="21" y2="10"></line>
                             </svg>
                         </div>
-                        Books appointments directly into your calendar
+                        Books appointments directly into your practice software/calendar
                     </li>
                 </ul>
             </div>

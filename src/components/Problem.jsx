@@ -54,14 +54,14 @@ export default function Problem() {
                     </ul>
 
                     <div className="lost-deals-alert">
-                        And in solar, that means lost deals.
+                        And in dentistry, that means empty chairs and lost patient value.
                     </div>
                 </div>
 
                 {/* Right: Visual */}
                 <div className="problem-visual">
                     <div className="problem-image-wrapper">
-                        <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1777924071/the_problem_secton_image_rc2dfy.webp&w=1040&output=webp&q=80" alt="Solar Engineer working" width="520" height="691" loading="lazy" decoding="async" />
+                        <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710128/third_section_image_eveqmp.webp&w=1040&output=webp&q=80" alt="Practice operations" width="520" height="691" loading="lazy" decoding="async" />
                     </div>
                     
                     {/* New Professional Impact Graphic */}
@@ -93,7 +93,7 @@ export default function Problem() {
                                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                             </svg>
                             <div className="piw-stat-text">
-                                <strong>391% higher</strong> conversion when prospect is called in minute one.
+                                <strong>391% higher</strong> booking rate when new patient leads are called within the first minute.
                             </div>
                         </div>
                     </div>

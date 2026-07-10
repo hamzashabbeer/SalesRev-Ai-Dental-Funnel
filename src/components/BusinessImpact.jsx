@@ -8,7 +8,7 @@ export default function BusinessImpact() {
             
             <div className="impact-header">
                 <div className="eyebrow-red">Business Impact</div>
-                <h2>What This Changes for Your <span className="highlight">Solar Business</span></h2>
+                <h2>What This Changes for Your <span className="highlight">Dental Practice</span></h2>
             </div>
 
             <div className="impact-grid">
@@ -74,7 +74,7 @@ export default function BusinessImpact() {
                 <div className="roi-content">
                     <span className="roi-eyebrow">Simple Example</span>
                     <div className="roi-text">
-                        A few extra booked appointments each week can turn into <span>additional deals every month.</span>
+                        A few extra booked appointments each week can turn into <span>additional production every month.</span>
                     </div>
                 </div>
                 <div className="roi-highlight">
@@ -84,7 +84,7 @@ export default function BusinessImpact() {
                         </svg>
                     </div>
                     <div className="roi-highlight-text">
-                        And in solar, <strong>one extra deal</strong> can easily cover the cost of the system.
+                        And in dentistry, just <strong>one high-value patient</strong> (like implants or aligners) can easily cover the cost of the system.
                     </div>
                 </div>
             </div>

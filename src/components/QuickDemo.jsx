@@ -309,7 +309,7 @@ export default function QuickDemo() {
                   </div>
                   
                   <div className="eyebrow-red">Book Your Demo</div>
-                  <h1 className="booking-headline">Let's automate your <span>solar lead conversion.</span></h1>
+                  <h1 className="booking-headline">Let's automate your <span>dental patient booking.</span></h1>
                   <p className="booking-subhead">
                       Select a time on the calendar to schedule a brief, 15-minute walkthrough. We’ll show you exactly how the system works and answer any questions you have.
                   </p>

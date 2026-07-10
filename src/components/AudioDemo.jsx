@@ -53,7 +53,7 @@ export default function AudioDemo() {
                 <div className="audio-content">
                     <div className="eyebrow-red">Hear It In Action</div>
                     <h2>Afraid it will sound like a<br /><span className="highlight">robotic voicemail?</span></h2>
-                    <p>Most business owners fear that AI will sound "fake" or mess up during a call. Our agents are built differently. They are so natural, empathetic, and solar-aware that your customers might never even realize they're talking to an AI.</p>
+                    <p>Most dental practice owners fear that AI will sound "fake" or mess up during a call. Our agents are built differently. They are so natural, empathetic, and dental-aware that your patients might never even realize they're talking to an AI.</p>
                 </div>
 
                 {/* Right Side: Professional Card UI */}
@@ -63,7 +63,7 @@ export default function AudioDemo() {
                         
                         {/* Card Image Top */}
                         <div className="dc-image">
-                            <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1778090186/solar-panel-installation-team-shaking-hands-at-wor-2026-03-19-23-44-21-utc_smdxwi.webp" alt="Solar Team Shaking Hands" loading="lazy" decoding="async" />
+                            <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710130/forth_section_image_u3os1d.webp" alt="Staff smiling" loading="lazy" decoding="async" />
                             <div className="dc-duration-tag">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -86,7 +86,7 @@ export default function AudioDemo() {
                                         </svg>
                                     </div>
                                     <div className="dc-text">
-                                        <h4>Solar Lead Qualification</h4>
+                                        <h4>New Patient Booking Call</h4>
                                         <p>Unedited AI Recording</p>
                                     </div>
                                 </div>

@@ -11,7 +11,7 @@ export default function Product() {
                 <div className="eyebrow-red">The Product</div>
                 <h2>What Is the <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp&w=196&output=webp&q=60" alt="SaleRev-Ai" className="product-logo-inline" width="196" height="56" loading="lazy" decoding="async" /> ?</h2>
                 <p className="product-intro">
-                    It’s a simple system designed specifically for solar companies. Its job is to make sure every lead is handled properly, from the first contact to the booked consultation.
+                    It’s a simple system designed specifically for dental practices. Its job is to make sure every patient inquiry is handled properly, from the first contact to the confirmed appointment.
                 </p>
             </div>
 
@@ -49,25 +49,25 @@ export default function Product() {
                 <div className="step-card">
                     <div className="step-badge">2</div>
                     <div className="step-title">Qualify</div>
-                    <div className="step-subtitle">Only send the right prospects</div>
+                    <div className="step-subtitle">Only send qualified patients</div>
                     <ul className="step-features">
                         <li className="step-feature-item">
                             <svg className="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            Confirms homeowner status
+                            Identifies treatment interest (Implants, Invisalign, General)
                         </li>
                         <li className="step-feature-item">
                             <svg className="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            Checks interest level dynamically
+                            Checks appointment urgency dynamically
                         </li>
                         <li className="step-feature-item">
                             <svg className="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            Filters out low-quality leads
+                            Filters out spam or out-of-network requests
                         </li>
                     </ul>
                 </div>
@@ -76,13 +76,13 @@ export default function Product() {
                 <div className="step-card">
                     <div className="step-badge">3</div>
                     <div className="step-title">Convert</div>
-                    <div className="step-subtitle">Turn leads into consultations</div>
+                    <div className="step-subtitle">Turn inquiries into confirmed appointments</div>
                     <ul className="step-features">
                         <li className="step-feature-item">
                             <svg className="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            Books directly into your calendar
+                            Integrates directly with your practice software/calendar
                         </li>
                         <li className="step-feature-item">
                             <svg className="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
@@ -113,7 +113,7 @@ export default function Product() {
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                         </div>
-                        Lead comes in
+                        Patient inquiry comes in
                     </div>
 
                     <div className="flow-arrow">
@@ -181,7 +181,7 @@ export default function Product() {
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
                         </div>
-                        Your team closes
+                        Your team treats them
                     </div>
 
                 </div>

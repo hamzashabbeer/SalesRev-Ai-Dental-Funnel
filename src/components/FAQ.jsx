@@ -18,11 +18,11 @@ export default function FAQ() {
     },
     {
       q: "This seems expensive.",
-      a: "In solar, one deal is worth thousands. Recovering just a few additional appointments can easily cover the cost."
+      a: "In dentistry, one new patient is worth thousands in lifetime value. Recovering just a few additional appointments can easily cover the cost."
     },
     {
       q: "Can it integrate with our CRM?",
-      a: "Yes. We can connect it with GoHighLevel or your existing CRM using workflows, webhooks, or API depending on your setup."
+      a: "Yes. We can connect it with your dental practice management systems, GoHighLevel, or existing CRM using workflows, webhooks, or API depending on your setup."
     },
     {
       q: "What if leads don’t answer?",
