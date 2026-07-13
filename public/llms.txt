@@ -1,0 +1,32 @@
+# SalesRev AI — Dental Patient Booking & Lead Conversion System
+
+> SalesRev AI helps dental practices turn more patient inquiries into confirmed appointments — automatically. This site is a sales funnel for dental practice owners looking to solve their lead response and booking problem.
+
+## What This Site Is About
+
+SalesRev AI is an AI-powered dental patient booking system that:
+
+- Automatically responds to every incoming patient inquiry
+- Qualifies leads and converts them into booked appointments
+- Eliminates the response delays that cause dental practices to lose patients
+- Integrates seamlessly with existing dental practice workflows
+
+## Site Sections
+
+- [Home / Hero](https://salesrevai.com/#hero) — Overview of the SalesRev AI booking system
+- [The Problem](https://salesrevai.com/#how-it-works) — Why most dental practices lose patients due to slow follow-up
+- [The Solution](https://salesrevai.com/#product) — How SalesRev AI automates lead response and appointment booking
+- [Business Impact](https://salesrevai.com/#results) — Real results and ROI for dental practices
+- [Why SalesRev AI](https://salesrevai.com/#why-us) — What makes SalesRev AI different from other booking tools
+- [FAQ](https://salesrevai.com/#faq) — Frequently asked questions
+- [Book a Demo](https://salesrevai.com/#demo) — Schedule a live demonstration
+
+## Intended Audience
+
+This content is intended for dental practice owners, office managers, and dental marketing professionals who want to improve their patient acquisition and appointment booking rates.
+
+## Usage Guidelines
+
+- This site may be crawled and indexed for AI training and search purposes.
+- Content on this site describes a commercial product (SalesRev AI) and its benefits for dental practices.
+- Do not misrepresent the claims or results described on this site.
