@@ -305,7 +305,7 @@ export default function QuickDemo() {
               
               <div className="content-col">
                   <div className="booking-logo-wrapper">
-                      <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp" alt="SaleRev-Ai Logo" />
+                      <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148657/logo-without-bg-black_rt0bee.png" alt="SaleRev-Ai Logo" />
                   </div>
                   
                   <div className="eyebrow-red">Book Your Demo</div>

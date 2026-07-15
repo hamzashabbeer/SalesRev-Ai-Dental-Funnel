@@ -163,13 +163,13 @@ export default function Footer() {
                   
                   <div className="footer-col-main">
                       <div className="mb-6">
-                          <img src="https://assets.cdn.filesafe.space/tH9jDTs3MXpIvPjTRA1Z/media/69d93b139a68c417bdfb394d.png" alt="Salesrev Logo" className="footer-logo" loading="lazy" decoding="async" />
+                          <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev Logo" className="footer-logo" loading="lazy" decoding="async" />
                       </div>
                       <p className="footer-desc">
-                          Salesrev helps ambitious businesses and brands with AI-driven, advanced digital marketing services. Start building visibility, growth, and success with us today.
+                          SaleRev AI helps ambitious businesses and brands with AI-driven, advanced digital marketing services. Start building visibility, growth, and success with us today.
                       </p>
                       <div className="footer-badge">
-                          <strong>SalesRev AI</strong> <span>|</span> A Product by TWS
+                          <strong>SaleRev AI</strong> <span>|</span> A Product by TWS
                       </div>
                   </div>
 
@@ -224,7 +224,7 @@ export default function Footer() {
 
               <div className="footer-bottom">
                   <div className="copyright">
-                      © Copyright <span id="current-year">{currentYear}</span> by <strong>Salesrev</strong>. All rights reserved.
+                      © Copyright <span id="current-year">{currentYear}</span> by <strong>SaleRev</strong>. All rights reserved.
                   </div>
                   <div className="footer-socials" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
                       <a href="https://www.instagram.com/salerevai/" target="_blank" rel="noopener noreferrer" className="footer-contact-link" aria-label="Instagram">

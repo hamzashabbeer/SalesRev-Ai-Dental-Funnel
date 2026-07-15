@@ -9,7 +9,7 @@ export default function Product() {
             {/* Product Header */}
             <div className="product-header">
                 <div className="eyebrow-red">The Product</div>
-                <h2>What Is the <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1777923479/Pink-White-Modern-Artificial-Intelligence-Logo-1_1_k2nhbu.webp&w=196&output=webp&q=60" alt="SaleRev-Ai" className="product-logo-inline" width="196" height="56" loading="lazy" decoding="async" /> ?</h2>
+                <h2>What Is the <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/v1784148657/logo-without-bg-black_rt0bee.png&w=196&output=webp&q=60" alt="SaleRev-Ai" className="product-logo-inline" width="196" height="56" loading="lazy" decoding="async" /> ?</h2>
                 <p className="product-intro">
                     It’s a simple system designed specifically for dental practices. Its job is to make sure every patient inquiry is handled properly, from the first contact to the confirmed appointment.
                 </p>
