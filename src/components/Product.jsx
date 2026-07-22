@@ -1,6 +1,13 @@
 import React from 'react';
 
-export default function Product() {
+export default function Product({ onCtaClick }) {
+  const handleCtaClick = (e) => {
+    if (onCtaClick) {
+      e.preventDefault();
+      onCtaClick();
+    }
+  };
+
   return (
     <section className="section-product" id="product">
       
@@ -185,6 +192,16 @@ export default function Product() {
                     </div>
 
                 </div>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
+                <a href="/book-demo" className="btn-primary" onClick={handleCtaClick}>
+                    See the System in Action
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
             </div>
 
         </div>

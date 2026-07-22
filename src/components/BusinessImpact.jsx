@@ -1,6 +1,13 @@
 import React from 'react';
 
-export default function BusinessImpact() {
+export default function BusinessImpact({ onCtaClick }) {
+  const handleCtaClick = (e) => {
+    if (onCtaClick) {
+      e.preventDefault();
+      onCtaClick();
+    }
+  };
+
   return (
     <section className="section-impact" id="results">
       
@@ -87,6 +94,16 @@ export default function BusinessImpact() {
                         And in dentistry, just <strong>one high-value patient</strong> (like implants or aligners) can easily cover the cost of the system.
                     </div>
                 </div>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
+                <a href="/book-demo" className="btn-primary" onClick={handleCtaClick}>
+                    Calculate My ROI Potential
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
             </div>
 
         </div>

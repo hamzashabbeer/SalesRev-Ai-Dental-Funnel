@@ -1,6 +1,13 @@
 import React from 'react';
 
-export default function WhyUs() {
+export default function WhyUs({ onCtaClick }) {
+  const handleCtaClick = (e) => {
+    if (onCtaClick) {
+      e.preventDefault();
+      onCtaClick();
+    }
+  };
+
   return (
     <section className="section-why" id="why-us">
       
@@ -76,6 +83,16 @@ export default function WhyUs() {
                             <span className="why-item-text">Built to fill empty chairs, not add complexity</span>
                         </li>
                     </ul>
+
+                    <div style={{ marginTop: '2.5rem' }}>
+                        <a href="/book-demo" className="btn-primary" onClick={handleCtaClick}>
+                            See Why Practices Switch
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
             </div>

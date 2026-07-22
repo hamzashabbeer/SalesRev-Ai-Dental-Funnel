@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function FinalCTA() {
+export default function FinalCTA({ onCtaClick }) {
+  const handleCtaClick = (e) => {
+    if (onCtaClick) {
+      e.preventDefault();
+      onCtaClick();
+    }
+  };
+
   return (
     <section className="section-cta">
       
@@ -19,7 +26,7 @@ export default function FinalCTA() {
                         <b>Now make sure you’re not losing them.</b>
                     </p>
 
-                    <Link to="/book-demo" className="btn-primary">
+                    <Link to="/book-demo" className="btn-primary" onClick={handleCtaClick}>
                         Book a Quick Demo Call
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>

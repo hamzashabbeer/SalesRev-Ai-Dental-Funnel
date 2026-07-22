@@ -1,6 +1,13 @@
 import React from 'react';
 
-export default function Problem() {
+export default function Problem({ onCtaClick }) {
+  const handleCtaClick = (e) => {
+    if (onCtaClick) {
+      e.preventDefault();
+      onCtaClick();
+    }
+  };
+
   return (
     <section className="section-problem" id="how-it-works">
       
@@ -55,6 +62,16 @@ export default function Problem() {
 
                     <div className="lost-deals-alert">
                         And in dentistry, that means empty chairs and lost patient value.
+                    </div>
+
+                    <div style={{ marginTop: '2.5rem' }}>
+                        <a href="/book-demo" className="btn-primary" onClick={handleCtaClick}>
+                            Fix My Booking Process
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 

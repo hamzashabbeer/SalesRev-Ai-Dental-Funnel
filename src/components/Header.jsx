@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ onCtaClick }) {
+  const handleCtaClick = (e) => {
+    if (onCtaClick) {
+      e.preventDefault();
+      onCtaClick();
+    }
+  };
+
   return (
     <header>
       
@@ -9,10 +16,10 @@ export default function Header() {
             <Link to="/" className="logo">
                 <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev-Ai Logo" width="245" height="70" fetchpriority="high" decoding="sync" />
             </Link>
-
+ 
             {/* Mobile Menu Toggle (Must be sibling of .nav-menu) */}
             <input type="checkbox" id="nav-toggle" />
-
+ 
             {/* Navigation Links (Centered) */}
             <div className="nav-menu">
                 <nav className="nav-links">
@@ -21,12 +28,14 @@ export default function Header() {
                     <Link to="/#results">Impact</Link>
                     <Link to="/#why-us">Why Us</Link>
                     <Link to="/#faq">FAQ</Link>
+                    <a href="https://app.salerevai.com/" target="_blank" rel="noopener noreferrer" className="mobile-login-link">Login</a>
                 </nav>
             </div>
-
+ 
             {/* Actions (Right) */}
             <div className="nav-actions">
-                <Link to="/book-demo" className="btn-nav-cta">Book a Demo</Link>
+                <a href="https://app.salerevai.com/" target="_blank" rel="noopener noreferrer" className="btn-nav-login">Login</a>
+                <Link to="/book-demo" className="btn-nav-cta" onClick={handleCtaClick}>Book a Demo</Link>
                 {/* Mobile Menu Toggle */}
                 <label htmlFor="nav-toggle" className="hamburger">
                     <span></span><span></span><span></span>
