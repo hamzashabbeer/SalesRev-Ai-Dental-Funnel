@@ -44,20 +44,7 @@ export default function LandingPage() {
     };
   }, [isModalOpen]);
 
-  // Load LeadConnector form embed script on mount so it's ready in advance
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.type = "text/javascript";
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
+
 
   return (
     <div className="app-container">
@@ -94,14 +81,7 @@ export default function LandingPage() {
                 style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
                 id="inline-9MaemJ17mh0DVobt7jPQ" 
                 data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
                 data-form-name="SalesRev-Ai Dental Landing Page form "
-                data-height="undefined"
                 data-layout-iframe-id="inline-9MaemJ17mh0DVobt7jPQ"
                 data-form-id="9MaemJ17mh0DVobt7jPQ"
                 title="SalesRev-Ai Dental Landing Page form "

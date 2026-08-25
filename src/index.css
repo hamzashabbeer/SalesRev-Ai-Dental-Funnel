@@ -196,6 +196,7 @@
             transition: all 0.2s ease;
             background: rgba(255, 255, 255, 0.05);
             text-decoration: none;
+            display: inline-block;
         }
 
         .btn-nav-login:hover {
@@ -1772,9 +1773,12 @@
             }
             #nav-toggle:checked ~ .nav-menu { display: flex; }
             .nav-links { flex-direction: column; text-align: center; gap: 1.5rem; }
-            .btn-nav-cta, .btn-nav-login { display: none; } 
+            .btn-nav-cta, 
+            .btn-nav-login { 
+                display: none !important; 
+            } 
             .mobile-login-link {
-                display: block;
+                display: block !important;
                 font-weight: 600;
                 color: #ffffff;
                 margin-top: 0.5rem;
@@ -2980,7 +2984,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2000;
+    z-index: 99999;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -3048,6 +3052,13 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+/* Prevent LeadConnector form_embed.js from injecting a full-screen overlay that blocks page buttons */
+.ep-overlay {
+    display: none !important;
+    pointer-events: none !important;
+}
+
 
 
 

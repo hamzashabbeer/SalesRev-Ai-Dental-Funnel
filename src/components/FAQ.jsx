@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function FAQ({ onCtaClick }) {
   const [openIndex, setOpenIndex] = useState(0);
@@ -60,13 +61,13 @@ export default function FAQ({ onCtaClick }) {
                             <h3>Still have questions?</h3>
                             <p>We're here to help you understand exactly how SaleRevAi can fit into your specific workflow.</p>
                         </div>
-                        <a href="#demo" className="btn-primary" style={{ width: '100%' }} onClick={handleCtaClick}>
+                        <Link to="/book-demo" className="btn-primary" style={{ width: '100%' }} onClick={handleCtaClick}>
                             Talk to our team
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

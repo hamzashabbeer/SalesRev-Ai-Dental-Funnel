@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function AudioDemo({ onCtaClick }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -62,13 +63,13 @@ export default function AudioDemo({ onCtaClick }) {
                     <h2>Afraid it will sound like a<br /><span className="highlight">robotic voicemail?</span></h2>
                     <p>Most dental practice owners fear that AI will sound "fake" or mess up during a call. Our agents are built differently. They are so natural, empathetic, and dental-aware that your patients might never even realize they're talking to an AI.</p>
                     <div style={{ marginTop: '2.5rem' }}>
-                        <a href="/book-demo" className="btn-primary" onClick={handleCtaClick}>
+                        <Link to="/book-demo" className="btn-primary" onClick={handleCtaClick}>
                             Test My Own Inbound Flow
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px' }}>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

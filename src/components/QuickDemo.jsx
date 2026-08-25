@@ -1,23 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
 export default function QuickDemo() {
-  useEffect(() => {
-    // Load the LeadConnector embed script
-    const script = document.createElement('script');
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.type = "text/javascript";
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      // Clean up script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
 
   return (
     <div className="quick-demo-page">
