@@ -3049,8 +3049,7 @@
     width: 100%;
     height: 100%;
     padding: 36px 12px 12px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 }
 
 /* Prevent LeadConnector form_embed.js from injecting a full-screen overlay that blocks page buttons */

@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Testimonials({ onCtaClick }) {
   const trackRef = useRef(null);
+  const [showArrows, setShowArrows] = useState(false);
 
   const handleCtaClick = (e) => {
     if (onCtaClick) {
@@ -14,12 +15,19 @@ export default function Testimonials({ onCtaClick }) {
 
   const scrollAmount = useRef(0);
 
+  const checkArrows = () => {
+    if (trackRef.current) {
+      setShowArrows(trackRef.current.scrollWidth > trackRef.current.clientWidth);
+    }
+  };
+
   const updateScrollAmount = () => {
     if (!trackRef.current) return;
     const card = trackRef.current.querySelector('.testi-card');
     if (!card) return;
     const gap = parseInt(window.getComputedStyle(trackRef.current).gap) || 0;
     scrollAmount.current = card.offsetWidth + gap;
+    checkArrows();
   };
 
   const handlePrev = () => {
@@ -58,8 +66,12 @@ export default function Testimonials({ onCtaClick }) {
     updateScrollAmount();
     startAutoScroll();
     window.addEventListener('resize', updateScrollAmount);
+    
+    const timeout = setTimeout(checkArrows, 100); // Check again after render
+
     return () => {
       window.removeEventListener('resize', updateScrollAmount);
+      clearTimeout(timeout);
       if (autoScrollInterval.current) {
         clearInterval(autoScrollInterval.current);
       }
@@ -76,9 +88,11 @@ export default function Testimonials({ onCtaClick }) {
 
             <div className="carousel-wrapper">
                 {/* Desktop Navigation Left */}
-                <button className="nav-btn prev" aria-label="Previous testimonials" onClick={handlePrev}>
-                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                </button>
+                {showArrows && (
+                  <button className="nav-btn prev" aria-label="Previous testimonials" onClick={handlePrev}>
+                      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                )}
 
                 {/* Scrollable Track */}
                 <div 
@@ -158,9 +172,11 @@ export default function Testimonials({ onCtaClick }) {
                 </div>
 
                 {/* Desktop Navigation Right */}
-                <button className="nav-btn next" aria-label="Next testimonials" onClick={handleNext}>
-                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
+                {showArrows && (
+                  <button className="nav-btn next" aria-label="Next testimonials" onClick={handleNext}>
+                      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                )}
 
             </div>
 

@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { useLocation } from 'react-router-dom';
 
 export default function QuickDemo() {
+  const location = useLocation();
+  const [calendarUrl, setCalendarUrl] = useState("https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD");
+
+  useEffect(() => {
+    if (location.search) {
+      setCalendarUrl(`https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD${location.search}`);
+    }
+  }, [location.search]);
 
   return (
     <div className="quick-demo-page">
@@ -330,7 +339,7 @@ export default function QuickDemo() {
                       
                       <div className="calendar-embed-wrapper">
                           <iframe 
-                            src="https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD" 
+                            src={calendarUrl} 
                             style={{ width: '100%', height: '100%', border: 'none', display: 'block' }} 
                             scrolling="yes" 
                             id="PLG00EEmlWlPN8cvz9zD_1778407755038"
