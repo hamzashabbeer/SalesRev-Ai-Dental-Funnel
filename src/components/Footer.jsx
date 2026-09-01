@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LegalModal from './LegalModal';
+import ServiceModal from './ServiceModal';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
+  const [legalModalTitle, setLegalModalTitle] = useState('');
+  const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
+  const [activeService, setActiveService] = useState('');
+
+  const openServiceModal = (e, serviceName) => {
+    e.preventDefault();
+    setActiveService(serviceName);
+    setIsServiceModalOpen(true);
+  };
+
+  const openLegalModal = (e, title) => {
+    e.preventDefault();
+    setLegalModalTitle(title);
+    setIsLegalModalOpen(true);
+  };
 
   return (
     <>
@@ -56,17 +74,16 @@ export default function Footer() {
         }
         .footer-col-main { grid-column: span 12; }
         .footer-col-contact { grid-column: span 12; }
-        .footer-col-services { grid-column: span 6; }
-        .footer-col-industries { grid-column: span 6; }
+        .footer-col-services { grid-column: span 12; }
 
         @media (min-width: 640px) {
             .footer-col-contact { grid-column: span 6; }
+            .footer-col-services { grid-column: span 6; }
         }
         @media (min-width: 1024px) {
-            .footer-col-main { grid-column: span 4; padding-right: 2rem; }
-            .footer-col-contact { grid-column: span 3; }
-            .footer-col-services { grid-column: span 2; }
-            .footer-col-industries { grid-column: span 3; }
+            .footer-col-main { grid-column: span 5; padding-right: 4rem; }
+            .footer-col-contact { grid-column: span 4; }
+            .footer-col-services { grid-column: span 3; }
         }
 
         .footer-logo { height: 2.5rem; object-fit: contain; margin-bottom: 1.5rem; }
@@ -192,28 +209,8 @@ export default function Footer() {
                       <ul className="footer-list space-y-3">
                           {['SEO','Paid Media (SEM)','Branding','Web Development','Custom Software','AI Automation'].map(s => (
                               <li key={s}>
-                                  <a href="#" className="footer-link">
+                                  <a href="#" className="footer-link" onClick={(e) => openServiceModal(e, s)}>
                                       <span className="footer-link-icon">▶</span> {s}
-                                  </a>
-                              </li>
-                          ))}
-                      </ul>
-                  </div>
-
-                  <div className="footer-col-industries">
-                      <h4 className="footer-title">Industries We Serve</h4>
-                      <ul className="footer-list space-y-3">
-                          {[
-                            { name: 'Real Estate', url: '#' },
-                            { name: 'Healthcare & Med Spa', url: '#' },
-                            { name: 'Home Services', url: '#' },
-                            { name: 'Legal Firms', url: '#' },
-                            { name: 'Automotive', url: 'https://automotive.salerevai.com/' },
-                            { name: 'Solar Industries', url: 'https://solar.salerevai.com/' }
-                          ].map(item => (
-                              <li key={item.name}>
-                                  <a href={item.url} className="footer-link">
-                                      <span className="footer-link-icon">▶</span> {item.name}
                                   </a>
                               </li>
                           ))}
@@ -238,13 +235,23 @@ export default function Footer() {
                       </a>
                   </div>
                   <div className="footer-legal">
-                      <a href="#">Privacy Policy</a>
-                      <a href="#">Terms of Service</a>
-                      <a href="#">Cookie Policy</a>
+                      <a href="#" onClick={(e) => openLegalModal(e, 'Privacy Policy')}>Privacy Policy</a>
+                      <a href="#" onClick={(e) => openLegalModal(e, 'Terms of Service')}>Terms of Service</a>
+                      <a href="#" onClick={(e) => openLegalModal(e, 'Cookie Policy')}>Cookie Policy</a>
                   </div>
               </div>
           </div>
       </footer>
+      <LegalModal 
+        isOpen={isLegalModalOpen} 
+        onClose={() => setIsLegalModalOpen(false)} 
+        title={legalModalTitle} 
+      />
+      <ServiceModal 
+        isOpen={isServiceModalOpen} 
+        onClose={() => setIsServiceModalOpen(false)} 
+        serviceName={activeService} 
+      />
     </>
   );
 }

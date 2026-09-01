@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header({ onCtaClick }) {
+  const location = useLocation();
+
   const handleCtaClick = (e) => {
     if (onCtaClick) {
       e.preventDefault();
@@ -9,12 +11,18 @@ export default function Header({ onCtaClick }) {
     }
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <header>
       
         <div className="nav-container">
-            <Link to="/" className="logo">
-                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev-Ai Logo" width="245" height="70" fetchpriority="high" decoding="sync" />
+            <Link to="/" className="logo" onClick={handleLogoClick}>
+                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev-Ai Logo" width="245" height="70" fetchPriority="high" decoding="sync" />
             </Link>
  
             {/* Mobile Menu Toggle (Must be sibling of .nav-menu) */}
