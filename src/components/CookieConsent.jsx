@@ -6,15 +6,14 @@ export default function CookieConsent() {
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
 
   useEffect(() => {
-    // TEMPORARILY DISABLED: Check if the user has already accepted cookies
-    // const hasAccepted = localStorage.getItem('cookieConsent');
-    // if (!hasAccepted) {
+    const hasAccepted = localStorage.getItem('cookieConsent');
+    if (!hasAccepted) {
       // Small delay for better UX
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 1000);
       return () => clearTimeout(timer);
-    // }
+    }
   }, []);
 
   const handleAccept = () => {
