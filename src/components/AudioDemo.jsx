@@ -114,6 +114,7 @@ export default function AudioDemo({ onCtaClick }) {
                                 <audio 
                                     ref={audioRef}
                                     src="https://storage.googleapis.com/synthflow-website-assets/Dental%20(Healthcare).mp3"
+                                    preload="none"
                                     onTimeUpdate={handleTimeUpdate}
                                     onEnded={handleEnded}
                                 />
