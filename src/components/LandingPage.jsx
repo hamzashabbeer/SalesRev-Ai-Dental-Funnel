@@ -17,8 +17,12 @@ const Footer = lazy(() => import('./Footer'));
 export default function LandingPage() {
   const { hash } = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => {
+    setIsModalOpen(true);
+    setHasUserInteracted(true);
+  };
   const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
@@ -76,17 +80,19 @@ export default function LandingPage() {
             </svg>
           </button>
           <div className="modal-body">
-            <iframe
-                src="https://api.leadconnectorhq.com/widget/form/9MaemJ17mh0DVobt7jPQ"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
-                id="inline-9MaemJ17mh0DVobt7jPQ" 
-                data-layout="{'id':'INLINE'}"
-                data-form-name="SalesRev-Ai Dental Landing Page form "
-                data-layout-iframe-id="inline-9MaemJ17mh0DVobt7jPQ"
-                data-form-id="9MaemJ17mh0DVobt7jPQ"
-                title="SalesRev-Ai Dental Landing Page form "
-                scrolling="yes"
-            ></iframe>
+            {hasUserInteracted && (
+              <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/9MaemJ17mh0DVobt7jPQ"
+                  style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+                  id="inline-9MaemJ17mh0DVobt7jPQ" 
+                  data-layout="{'id':'INLINE'}"
+                  data-form-name="SalesRev-Ai Dental Landing Page form "
+                  data-layout-iframe-id="inline-9MaemJ17mh0DVobt7jPQ"
+                  data-form-id="9MaemJ17mh0DVobt7jPQ"
+                  title="SalesRev-Ai Dental Landing Page form "
+                  scrolling="yes"
+              ></iframe>
+            )}
           </div>
         </div>
       </div>
