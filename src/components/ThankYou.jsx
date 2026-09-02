@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
 export default function ThankYou() {
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+  }, []);
+
   return (
     <div className="thank-you-page">
       <Header />
