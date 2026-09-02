@@ -180,7 +180,7 @@ export default function Footer() {
                   
                   <div className="footer-col-main">
                       <div className="mb-6">
-                          <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev Logo" className="footer-logo" loading="lazy" decoding="async" />
+                          <img src="https://res.cloudinary.com/dvikl5pda/image/upload/c_scale,w_500,f_auto,q_auto/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev Logo" className="footer-logo" loading="lazy" decoding="async" />
                       </div>
                       <p className="footer-desc">
                           SaleRev AI helps ambitious businesses and brands with AI-driven, advanced digital marketing services. Start building visibility, growth, and success with us today.

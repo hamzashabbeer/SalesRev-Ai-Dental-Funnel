@@ -22,7 +22,7 @@ export default function Header({ onCtaClick }) {
       
         <div className="nav-container">
             <Link to="/" className="logo" onClick={handleLogoClick}>
-                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev-Ai Logo" width="245" height="70" fetchPriority="high" decoding="sync" />
+                <img src="https://res.cloudinary.com/dvikl5pda/image/upload/c_scale,w_500,f_auto,q_auto/v1784148593/logo-without-bg-white_rhu62f.png" alt="SaleRev-Ai Logo" width="245" height="70" fetchPriority="high" decoding="sync" />
             </Link>
  
             {/* Mobile Menu Toggle (Must be sibling of .nav-menu) */}
