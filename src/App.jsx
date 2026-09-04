@@ -1,7 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import CookieConsent from './components/CookieConsent';
+
 
 // Lazy load secondary routes to reduce initial JS bundle size
 const QuickDemo = lazy(() => import('./components/QuickDemo'));
@@ -28,7 +28,6 @@ export default function App() {
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Suspense>
-      <CookieConsent />
     </>
   );
 }
