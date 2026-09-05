@@ -2627,7 +2627,8 @@
 
         @media (max-width: 768px) {
             .section-cta { padding: 1rem 0 4rem 0; }
-            .cta-billboard { padding: 4rem 1.5rem; border-radius: 24px; }
+            .section-cta .container { padding: 0 8px; }
+            .cta-billboard { padding: 2.5rem 0.5rem; border-radius: 24px; }
             .cta-heading { font-size: 1.9rem; }
             .cta-description { font-size: 1.05rem; margin-bottom: 2.5rem; }
             .btn-primary { padding: 16px 32px; font-size: 1.05rem; width: 100%; }
@@ -3000,10 +3001,10 @@
 .modal-container {
     background-color: #ffffff;
     border-radius: 20px;
-    width: 90%;
-    max-width: 580px;
-    height: 720px;
-    max-height: 90vh;
+    width: 95%;
+    max-width: 900px;
+    height: 85vh;
+    max-height: 95vh;
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -3049,7 +3050,9 @@
     width: 100%;
     height: 100%;
     padding: 36px 12px 12px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Prevent LeadConnector form_embed.js from injecting a full-screen overlay that blocks page buttons */
@@ -3058,7 +3061,55 @@
     pointer-events: none !important;
 }
 
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, #d62828 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 8px 24px rgba(237, 50, 49, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 99;
+}
 
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(237, 50, 49, 0.4);
+    background: linear-gradient(135deg, #d62828 0%, var(--primary-hover) 100%);
+}
 
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+}
 
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 44px;
+        height: 44px;
+    }
+    .back-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
