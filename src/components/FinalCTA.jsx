@@ -1,50 +1,80 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function FinalCTA() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef(null);
+  const [iframeHeight, setIframeHeight] = useState(747);
 
   useEffect(() => {
-    if (isLoaded) {
-      const scriptId = 'leadconnector-script';
-      if (!document.getElementById(scriptId)) {
-        const script = document.createElement('script');
-        script.src = 'https://link.msgsndr.com/js/form_embed.js';
-        script.id = scriptId;
-        script.type = 'text/javascript';
-        script.async = true;
-        document.body.appendChild(script);
-      }
-      return;
+    // 1. Load LeadConnector form embed script
+    const scriptId = 'leadconnector-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.src = 'https://link.msgsndr.com/js/form_embed.js';
+      script.id = scriptId;
+      script.type = 'text/javascript';
+      script.async = true;
+      document.body.appendChild(script);
     }
 
-    const handleCtaTrigger = () => {
-      setIsLoaded(true);
-    };
-    window.addEventListener('load-booking-calendar', handleCtaTrigger, { once: true });
+    // 2. Intercept message events in capture phase:
+    // When required field errors occur, GHL sends 'scrollTo' / 'scrollToOffset' which causes form_embed.js
+    // to jump the parent window down to the error input, scrolling the heading & labels off-screen.
+    // We block scrollTo events with stopImmediatePropagation while capturing height resize cleanly.
+    const handleMessage = (e) => {
+      try {
+        const data = e.data;
+        if (typeof data === 'string') {
+          // iFrameSizer format: [iFrameSizer]iframeId:height:width:type
+          if (data.startsWith('[iFrameSizer]')) {
+            const parts = data.slice(13).split(':');
+            const type = parts[3];
 
-    let observer;
-    if ('IntersectionObserver' in window && containerRef.current) {
-      observer = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting) {
-            setIsLoaded(true);
-            if (observer) observer.disconnect();
+            // Block automatic scrolling so heading and labels stay locked in view
+            if (type === 'scrollTo' || type === 'scrollToOffset') {
+              e.stopImmediatePropagation();
+              e.stopPropagation();
+              return;
+            }
+
+            if (type !== 'close') {
+              const h = parseInt(parts[1], 10);
+              if (!isNaN(h) && h >= 400 && h < 3500) {
+                setIframeHeight(Math.max(h, 747));
+              }
+            }
+          } else {
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.action === 'scrollTo' || parsed.type === 'scrollTo') {
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                return;
+              }
+              const h = parsed.height || (parsed.data && parsed.data.height);
+              if (typeof h === 'number' && h >= 400 && h < 3500) {
+                setIframeHeight(Math.max(h, 747));
+              }
+            } catch (_) {}
           }
-        },
-        { rootMargin: '600px 0px' }
-      );
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      window.removeEventListener('load-booking-calendar', handleCtaTrigger);
-      if (observer) observer.disconnect();
+        } else if (data && typeof data === 'object') {
+          if (data.action === 'scrollTo' || data.type === 'scrollTo') {
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+            return;
+          }
+          const h = data.height || (data.data && data.data.height);
+          if (typeof h === 'number' && h >= 400 && h < 3500) {
+            setIframeHeight(Math.max(h, 747));
+          }
+        }
+      } catch (_) {}
     };
-  }, [isLoaded]);
+
+    window.addEventListener('message', handleMessage, true);
+    return () => window.removeEventListener('message', handleMessage, true);
+  }, []);
 
   return (
-    <section className="section-cta" id="final-cta" ref={containerRef}>
+    <section className="section-cta" id="final-cta">
       <div className="container">
         <div className="cta-billboard">
           <div className="cta-content" style={{ width: '100%' }}>
@@ -55,46 +85,32 @@ export default function FinalCTA() {
               <b>See exactly how we can transform your practice.</b>
             </p>
 
-            <div style={{ width: '100%', background: '#fff', borderRadius: '16px', overflow: 'hidden', minHeight: '600px', paddingLeft: '5px', boxSizing: 'border-box' }}>
-              {isLoaded ? (
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD"
-                  allow="payment"
-                  style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-                  scrolling="no"
-                  id="PLG00EEmlWlPN8cvz9zD_1788601376850"
-                  title="SalesRev-Ai Dental Booking Calendar"
-                />
-              ) : (
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  minHeight: '600px',
-                  color: '#64748b',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
-                  <div style={{
-                    width: '36px',
-                    height: '36px',
-                    border: '3px solid #e2e8f0',
-                    borderTopColor: '#b91c1c',
-                    borderRadius: '50%',
-                    animation: 'spin 1s linear infinite',
-                    marginBottom: '1rem'
-                  }} />
-                  <p style={{ margin: '0 0 1rem 0', fontWeight: 500, color: '#334155' }}>Loading booking calendar...</p>
-                  <button
-                    onClick={() => setIsLoaded(true)}
-                    className="btn-primary"
-                    style={{ fontSize: '0.875rem', padding: '8px 18px' }}
-                  >
-                    Click to Open Calendar Now
-                  </button>
-                </div>
-              )}
+            <div style={{
+              width: '100%',
+              background: '#fff',
+              borderRadius: '16px',
+              minHeight: `${iframeHeight}px`,
+              boxSizing: 'border-box',
+              overflow: 'hidden',
+              transition: 'min-height 0.25s ease'
+            }}>
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD"
+                allow="payment"
+                style={{
+                  width: '100%',
+                  height: `${iframeHeight}px`,
+                  minHeight: '747px',
+                  border: 'none',
+                  display: 'block',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'height 0.25s ease'
+                }}
+                scrolling="no"
+                id="PLG00EEmlWlPN8cvz9zD_1788601376850"
+                title="SalesRev-Ai Dental Booking Calendar"
+              />
             </div>
 
             <div className="cta-guarantee" style={{ marginTop: '2rem' }}>

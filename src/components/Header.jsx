@@ -37,6 +37,7 @@ export default function Header({ onCtaClick }) {
                     <Link to="/#why-us">Why Us</Link>
                     <Link to="/#faq">FAQ</Link>
                     <a href="https://app.salerevai.com/" target="_blank" rel="noopener noreferrer" className="mobile-login-link">Login</a>
+                    <Link to="/book-demo" className="mobile-cta-link" onClick={handleCtaClick}>Book a Demo</Link>
                 </nav>
             </div>
  
