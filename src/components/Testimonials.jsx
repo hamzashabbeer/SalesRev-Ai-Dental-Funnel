@@ -1,6 +1,46 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+function VideoFacade({ videoId, title }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  if (isPlaying) {
+    return (
+      <div className="tc-video-wrapper">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="tc-video-wrapper">
+      <img
+        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+        alt={title}
+        width="480"
+        height="360"
+        loading="lazy"
+        decoding="async"
+      />
+      <button
+        type="button"
+        className="tc-play-btn"
+        onClick={() => setIsPlaying(true)}
+        aria-label={`Play ${title}`}
+      >
+        <svg viewBox="0 0 24 24">
+          <polygon points="6 3 20 12 6 21 6 3" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
 export default function Testimonials({ onCtaClick }) {
   const trackRef = useRef(null);
   const [showArrows, setShowArrows] = useState(false);
@@ -103,9 +143,7 @@ export default function Testimonials({ onCtaClick }) {
                 >
                     {/* Card 1: Sebastian */}
                     <div className="testi-card">
-                        <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/5R5VoqlWS9c" title="Client Testimonial for Sebastian" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
-                        </div>
+                        <VideoFacade videoId="5R5VoqlWS9c" title="Client Testimonial for Sebastian" />
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -114,7 +152,7 @@ export default function Testimonials({ onCtaClick }) {
                                 "Sebastian, Founder of Canvas Freaks, leveraged our partnership to <b>more than double his revenue in one year</b>, jumping from a stagnant <b>$1.5 million to $3.2 million.</b>"
                             </p>
                             <div className="tc-author">
-                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg" alt="Sebastian" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68d72665dd639f6767374447.jpeg" alt="Sebastian" width="52" height="52" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Sebastian</span>
                                     <span className="tc-role">Founder of Canvas Freaks</span>
@@ -125,9 +163,7 @@ export default function Testimonials({ onCtaClick }) {
 
                     {/* Card 2: Linda */}
                     <div className="testi-card">
-                        <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/K0iYAuDzSVA" title="Client Testimonial for Linda" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
-                        </div>
+                        <VideoFacade videoId="K0iYAuDzSVA" title="Client Testimonial for Linda" />
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -136,7 +172,7 @@ export default function Testimonials({ onCtaClick }) {
                                 "Linda, a business owner, captured previously lost leads and <b>dramatically increased appointments</b> by using SaleRev-Ai for instant, automated follow-ups."
                             </p>
                             <div className="tc-author">
-                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Linda" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop&dpr=1" alt="Linda" width="52" height="52" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Linda</span>
                                     <span className="tc-role">Business Owner</span>
@@ -147,9 +183,7 @@ export default function Testimonials({ onCtaClick }) {
 
                     {/* Card 3: Deborah */}
                     <div className="testi-card">
-                        <div className="tc-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/n2ClOdFNN4g" title="Client Testimonial for Deborah" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe>
-                        </div>
+                        <VideoFacade videoId="n2ClOdFNN4g" title="Client Testimonial for Deborah" />
                         <div className="tc-content">
                             <svg className="tc-quote-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -158,7 +192,7 @@ export default function Testimonials({ onCtaClick }) {
                                 "Deborah Williamson, CEO & Founder of Purity Wellness, achieved outstanding results with our database reactivation strategy generating <b>$247,000 in just 2 months.</b>"
                             </p>
                             <div className="tc-author">
-                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg" alt="Deborah Williamson" className="tc-avatar" loading="lazy" decoding="async" />
+                                <img src="https://storage.googleapis.com/msgsndr/gShNfLlJxL4QxP5QFBhr/media/68c20b1144a66350e626f0c3.jpeg" alt="Deborah Williamson" width="52" height="52" className="tc-avatar" loading="lazy" decoding="async" />
                                 <div className="tc-author-details">
                                     <span className="tc-name">Deborah Williamson</span>
                                     <span className="tc-role">CEO of Purity Wellness</span>

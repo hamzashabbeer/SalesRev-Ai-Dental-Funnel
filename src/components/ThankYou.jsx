@@ -26,7 +26,7 @@ export default function ThankYou() {
         }
 
         .thank-you-page {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-body);
             -webkit-font-smoothing: antialiased;

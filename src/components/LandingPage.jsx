@@ -19,6 +19,7 @@ export default function LandingPage() {
   const { hash } = useLocation();
 
   const scrollToCalendar = () => {
+    window.dispatchEvent(new CustomEvent('load-booking-calendar'));
     const calendarSection = document.getElementById('final-cta');
     if (calendarSection) {
       calendarSection.scrollIntoView({ behavior: 'smooth' });
@@ -27,6 +28,9 @@ export default function LandingPage() {
 
   useEffect(() => {
     if (hash) {
+      if (hash === '#final-cta' || hash === '#demo') {
+        window.dispatchEvent(new CustomEvent('load-booking-calendar'));
+      }
       const element = document.getElementById(hash.replace('#', ''));
       if (element) {
         setTimeout(() => {

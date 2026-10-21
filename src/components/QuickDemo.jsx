@@ -11,6 +11,16 @@ export default function QuickDemo() {
     if (location.search) {
       setCalendarUrl(`https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD${location.search}`);
     }
+
+    const scriptId = 'leadconnector-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.src = 'https://link.msgsndr.com/js/form_embed.js';
+      script.id = scriptId;
+      script.type = 'text/javascript';
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, [location.search]);
 
   return (
@@ -31,7 +41,7 @@ export default function QuickDemo() {
         }
 
         .quick-demo-page {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-body);
             -webkit-font-smoothing: antialiased;

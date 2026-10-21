@@ -18,7 +18,7 @@ export default function WhyUs({ onCtaClick }) {
                 {/* Left: Visual */}
                 <div className="why-visual">
                     <div className="why-image-wrapper">
-                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710129/Secnd_section_image_lvd5nt.webp" alt="Dental practice staff" loading="lazy" decoding="async" />
+                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710129/Secnd_section_image_lvd5nt.webp" alt="Dental practice staff" width="520" height="650" loading="lazy" decoding="async" />
                     </div>
                     
                     {/* Upgraded Premium Badge */}

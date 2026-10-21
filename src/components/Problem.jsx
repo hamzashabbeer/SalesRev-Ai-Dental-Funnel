@@ -79,7 +79,7 @@ export default function Problem({ onCtaClick }) {
                 {/* Right: Visual */}
                 <div className="problem-visual">
                     <div className="problem-image-wrapper">
-                        <img src="https://wsrv.nl/?url=https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710128/third_section_image_eveqmp.webp&w=700&output=webp&q=80" alt="Practice operations" width="520" height="691" loading="lazy" decoding="async" />
+                        <img src="https://res.cloudinary.com/dvikl5pda/image/upload/c_scale,w_700,f_auto,q_auto/v1783710128/third_section_image_eveqmp.webp" alt="Practice operations" width="520" height="691" loading="lazy" decoding="async" />
                     </div>
                     
                     {/* New Professional Impact Graphic */}

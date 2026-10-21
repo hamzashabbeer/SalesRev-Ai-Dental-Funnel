@@ -80,7 +80,7 @@ export default function AudioDemo({ onCtaClick }) {
                         
                         {/* Card Image Top */}
                         <div className="dc-image">
-                            <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710130/forth_section_image_u3os1d.webp" alt="Staff smiling" loading="lazy" decoding="async" />
+                            <img src="https://res.cloudinary.com/dvikl5pda/image/upload/q_auto/f_auto/v1783710130/forth_section_image_u3os1d.webp" alt="Staff smiling" width="520" height="260" loading="lazy" decoding="async" />
                             <div className="dc-duration-tag">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -103,7 +103,7 @@ export default function AudioDemo({ onCtaClick }) {
                                         </svg>
                                     </div>
                                     <div className="dc-text">
-                                        <h4>New Patient Booking Call</h4>
+                                        <h3>New Patient Booking Call</h3>
                                         <p>Unedited AI Recording</p>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@ export default function AudioDemo({ onCtaClick }) {
                                 <button 
                                   className="play-btn" 
                                   onClick={togglePlay}
-                                  aria-label="Play Audio"
+                                  aria-label={isPlaying ? "Pause Audio" : "Play Audio"}
                                 >
                                     {isPlaying ? pauseIcon : playIcon}
                                 </button>
