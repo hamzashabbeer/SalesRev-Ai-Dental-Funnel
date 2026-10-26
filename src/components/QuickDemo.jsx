@@ -5,11 +5,11 @@ import { useLocation } from 'react-router-dom';
 
 export default function QuickDemo() {
   const location = useLocation();
-  const [calendarUrl, setCalendarUrl] = useState("https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD");
+  const [calendarUrl, setCalendarUrl] = useState("https://api.leadconnectorhq.com/widget/booking/126s12QvrnMSGF1mSNpB");
 
   useEffect(() => {
     if (location.search) {
-      setCalendarUrl(`https://api.leadconnectorhq.com/widget/booking/PLG00EEmlWlPN8cvz9zD${location.search}`);
+      setCalendarUrl(`https://api.leadconnectorhq.com/widget/booking/126s12QvrnMSGF1mSNpB${location.search}`);
     }
 
     const scriptId = 'leadconnector-script';
@@ -350,9 +350,10 @@ export default function QuickDemo() {
                       <div className="calendar-embed-wrapper">
                           <iframe 
                             src={calendarUrl} 
-                            style={{ width: '100%', height: '100%', border: 'none', display: 'block' }} 
-                            scrolling="yes" 
-                            id="PLG00EEmlWlPN8cvz9zD_1778407755038"
+                            allow="payment"
+                            style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
+                            scrolling="no" 
+                            id="126s12QvrnMSGF1mSNpB_1792679058997"
                             title="Quick Demo Booking Calendar"
                           ></iframe>
                       </div>
